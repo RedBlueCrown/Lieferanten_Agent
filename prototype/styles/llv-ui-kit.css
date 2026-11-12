@@ -1,0 +1,343 @@
+/* ============================================================
+   LLV UI Kit — component CSS
+   Mirrors @llv/ux + PrimeNG conventions but slimmer/cosmetic.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+
+/* ---------- Buttons ---------- */
+.llv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: var(--button-height);
+  padding: 0 var(--space-l);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-primary-500);
+  font-family: var(--font-family);
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-normal);
+  cursor: pointer;
+  transition: background-color .1s, color .1s, border-color .1s;
+  white-space: nowrap;
+  user-select: none;
+  line-height: 1;
+}
+.llv-btn i { font-size: 13px; }
+.llv-btn:focus-visible { outline: none; border-color: #fff; box-shadow: 0 0 0 2px var(--color-primary-500); }
+.llv-btn.is-focus { border-color: #fff; box-shadow: 0 0 0 2px var(--color-primary-500); }
+
+.llv-btn--primary {
+  background: var(--color-primary-500);
+  color: #fff;
+  border-color: var(--color-primary-500);
+}
+.llv-btn--primary:hover, .llv-btn--primary.is-hover {
+  background: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+}
+.llv-btn--primary:disabled, .llv-btn--primary[disabled] {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-50);
+  color: #fff;
+  cursor: not-allowed;
+}
+
+.llv-btn--secondary {
+  background: transparent;
+  color: var(--color-primary-500);
+  border-color: transparent;
+}
+.llv-btn--secondary:hover, .llv-btn--secondary.is-hover {
+  border-color: var(--color-primary-500);
+}
+.llv-btn--secondary:disabled, .llv-btn--secondary[disabled] {
+  color: var(--color-gray-100);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+.llv-btn--link {
+  background: transparent;
+  color: var(--color-primary-500);
+  border: none;
+  border-radius: 0;
+  padding: var(--space-s) calc(var(--space-s) * 3);
+  height: auto;
+}
+.llv-btn--link:hover { color: var(--color-primary-700); text-decoration: underline; }
+.llv-btn--link:disabled { color: var(--color-gray-100); }
+
+.llv-btn--icon {
+  background: transparent;
+  border: none;
+  color: var(--color-primary-500);
+  width: var(--button-icon-size);
+  height: var(--button-icon-size);
+  padding: 0;
+  border-radius: var(--radius-full);
+}
+.llv-btn--icon:hover { color: var(--color-primary-700); }
+
+/* ---------- Inputs ---------- */
+.llv-input {
+  height: var(--input-height);
+  width: 100%;
+  border: 1px solid var(--color-gray-100);
+  border-radius: var(--radius-sm);
+  padding: 0 var(--space-m);
+  font-family: var(--font-family);
+  font-size: var(--font-size-3);
+  color: var(--color-black);
+  background: #fff;
+  outline: none;
+}
+.llv-input::placeholder { color: var(--color-gray-100); }
+.llv-input:focus, .llv-input.is-focus {
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 1px var(--color-primary-500);
+}
+.llv-input.is-error {
+  background: var(--color-red-50);
+  border-color: var(--color-red-500);
+}
+.llv-input:disabled {
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-50);
+  color: var(--color-gray-300);
+  cursor: not-allowed;
+}
+.llv-input-icon { position: relative; }
+.llv-input-icon i { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--color-gray-400); font-size: 13px; }
+.llv-input-icon .llv-input { padding-right: 30px; }
+
+/* ---------- Checkbox / Radio (cosmetic) ---------- */
+.llv-check { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; }
+.llv-check input { appearance: none; width: 16px; height: 16px; border: 1px solid var(--color-gray-100); border-radius: var(--radius-sm); background: #fff; display: inline-grid; place-content: center; margin: 0; }
+.llv-check input:checked { background: var(--color-primary-500); border-color: var(--color-primary-500); }
+.llv-check input:checked::after { content: ''; width: 8px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: translateY(-1px) rotate(-45deg); }
+
+.llv-radio { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; }
+.llv-radio input { appearance: none; width: 16px; height: 16px; border: 1px solid var(--color-gray-100); border-radius: 100px; background: #fff; display: inline-grid; place-content: center; margin: 0; }
+.llv-radio input:checked { border-color: var(--color-primary-500); }
+.llv-radio input:checked::after { content: ''; width: 10px; height: 10px; border-radius: 100px; background: var(--color-primary-500); }
+
+/* ---------- Tags ---------- */
+.llv-tag {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 22px;
+  padding: 0 14px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--color-gray-30);
+  color: var(--color-black);
+  white-space: nowrap;
+}
+.llv-tag--yellow { background: var(--color-yellow-500); color: var(--color-black); }
+.llv-tag--blue   { background: var(--color-primary-500); color: #fff; }
+.llv-tag--green  { background: var(--color-green-500);   color: #fff; }
+.llv-tag--red    { background: var(--color-red-500);     color: #fff; }
+.llv-tag--grey   { background: var(--color-gray-100);    color: var(--color-black); }
+.llv-tag--black  { background: var(--color-gray-900);    color: #fff; }
+.llv-tag--stretch { display: flex; width: 100%; }
+
+/* Legacy aliases kept for older previews */
+.llv-tag--info    { background: var(--color-primary-500); color: #fff; }
+.llv-tag--success { background: var(--color-green-500);   color: #fff; }
+.llv-tag--warning { background: var(--color-yellow-500);  color: var(--color-black); }
+.llv-tag--danger  { background: var(--color-red-500);     color: #fff; }
+
+/* ---------- Notifications (inline & flag/toast) ---------- */
+/* Mirrors @llv/ux notification: 60-px colored icon block on the left,
+   tinted body, white FA glyph at 24 px, dismiss in matching color. */
+.llv-notif {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 60px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-3);
+  color: var(--color-black);
+  overflow: hidden;
+}
+.llv-notif__icon {
+  flex: 0 0 60px;
+  display: grid;
+  place-content: center;
+  color: #fff;
+  font-size: 24px;
+}
+.llv-notif__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 10px 16px 10px 12px;
+  line-height: 1.45;
+}
+.llv-notif__dismiss {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.llv-notif--success                  { background: var(--color-green-50); }
+.llv-notif--success .llv-notif__icon { background: var(--color-green-500); }
+.llv-notif--success .llv-notif__dismiss { color: var(--color-green-500); }
+.llv-notif--info                     { background: var(--color-primary-50); }
+.llv-notif--info .llv-notif__icon    { background: var(--color-primary-300); }
+.llv-notif--info .llv-notif__dismiss { color: var(--color-primary-300); }
+.llv-notif--warn                     { background: var(--color-yellow-50); }
+.llv-notif--warn .llv-notif__icon    { background: var(--color-yellow-500); }
+.llv-notif--warn .llv-notif__dismiss { color: var(--color-yellow-500); }
+.llv-notif--error                    { background: var(--color-red-50); }
+.llv-notif--error .llv-notif__icon   { background: var(--color-red-500); }
+.llv-notif--error .llv-notif__dismiss{ color: var(--color-red-500); }
+.llv-notif--help                     { background: var(--color-gray-50); }
+.llv-notif--help .llv-notif__icon    { background: var(--color-gray-200); }
+.llv-notif--help .llv-notif__dismiss { color: var(--color-gray-500); }
+
+/* Legacy alias so older mocks still render */
+.llv-flag { display: flex; align-items: stretch; min-height: 60px; border-radius: var(--radius-sm); }
+
+/* ---------- Card ---------- */
+.llv-card {
+  background: #fff;
+  border-radius: var(--radius-sm);
+  padding: var(--space-l);
+}
+.llv-card--elevated { box-shadow: var(--shadow-default); }
+
+/* ---------- Header ---------- */
+.llv-header {
+  display: flex; align-items: center;
+  background: var(--color-primary-500);
+  color: #fff;
+  padding: 0 27px;
+  gap: 24px;
+}
+.llv-header--compact { height: var(--header-height-compact); }
+.llv-header--extended { height: var(--header-height); }
+.llv-header__brand { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.llv-header__brand img { height: 18px; filter: brightness(0) invert(1); }
+.llv-header__app { font-weight: 600; font-size: 14px; white-space: nowrap; }
+.llv-header__nav { display: flex; gap: 0; align-items: stretch; align-self: stretch; flex: 1; min-width: 0; }
+.llv-header__nav a {
+  display: flex; align-items: center; padding: 0 16px;
+  color: rgba(255,255,255,.85);
+  font-size: 13px; font-weight: 400;
+  cursor: pointer; text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.llv-header__nav a:hover { color: #fff; text-decoration: none; }
+.llv-header__nav a.is-active { color: #fff; font-weight: 600; border-bottom-color: var(--color-yellow-500); }
+.llv-header__right { display: flex; gap: 10px; align-items: center; margin-left: auto; }
+.llv-iconbtn { background: transparent; border: none; color: #fff; width: 30px; height: 30px; border-radius: 100px; cursor: pointer; font-size: 14px; display: inline-grid; place-content: center; }
+.llv-iconbtn:hover { background: rgba(255,255,255,.12); }
+.llv-avatar { width: 30px; height: 30px; border-radius: 100px; background: var(--color-primary-700); color: #fff; display: inline-grid; place-content: center; font-size: 11px; font-weight: 700; }
+
+/* ---------- Sidebar ---------- */
+.llv-sidebar { width: var(--sidebar-width); background: #fff; border-right: 1px solid var(--border-subtle); display: flex; flex-direction: column; }
+.llv-sidebar__item {
+  width: 100%; height: var(--sidebar-item-height);
+  background: transparent; border: none; cursor: pointer;
+  color: var(--color-gray-300); font-size: 20px;
+  display: grid; place-content: center;
+  border-left: 3px solid transparent;
+}
+.llv-sidebar__item:hover { background: var(--color-gray-10); color: var(--color-gray-500); }
+.llv-sidebar__item.is-active { color: var(--color-primary-500); background: var(--color-gray-10); }
+
+/* ---------- Tabs ---------- */
+.llv-tabs { display: flex; border-bottom: 1px solid var(--border-subtle); gap: 0; }
+.llv-tabs a { padding: 10px 16px; font-size: 13px; color: var(--color-gray-300); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.llv-tabs a:hover { color: var(--color-primary-500); text-decoration: none; }
+.llv-tabs a.is-active { color: var(--color-primary-500); border-bottom-color: var(--color-primary-500); font-weight: 600; }
+
+/* ---------- Table ---------- */
+.llv-table { width: 100%; border-collapse: collapse; background: #fff; font-size: 13px; }
+.llv-table th { text-align: left; padding: 10px 12px; font-weight: 700; color: var(--color-gray-500); border-bottom: 1px solid var(--color-gray-50); background: var(--color-gray-10); white-space: nowrap; }
+.llv-table td { padding: 10px 12px; border-bottom: 1px solid var(--color-gray-50); color: var(--color-black); }
+.llv-table tr:hover td { background: var(--color-gray-10); }
+.llv-table .num { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* ---------- Layout shell ---------- */
+.llv-app { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; min-height: 0; background: var(--color-gray-20); }
+.llv-app__body { display: grid; grid-template-columns: auto 1fr; min-height: 0; }
+.llv-context {
+  padding: 24px 40px 16px;
+  background: var(--color-gray-20);
+}
+.llv-context h1 { margin: 0 0 4px; }
+.llv-context__crumbs { font-size: 11px; color: var(--fg-muted); margin-bottom: 10px; }
+.llv-context__actions { display: flex; gap: 8px; margin-top: 10px; }
+.llv-content { padding: 0 40px 35px; overflow: auto; }
+.llv-footer {
+  padding: 8px 40px;
+  font-size: 11px; color: var(--fg-muted);
+  background: var(--color-gray-20);
+  border-top: 1px solid var(--border-subtle);
+}
+.llv-footer a { font-size: 11px; }
+
+/* ---------- Login mask ---------- */
+.llv-login {
+  position: fixed; inset: 0;
+  background: var(--color-primary-50);
+  display: grid; place-items: center;
+  padding: 24px;
+}
+.llv-login__card {
+  width: 360px; background: #fff; border-radius: var(--radius-sm);
+  padding: 36px 28px 28px;
+  box-shadow: var(--shadow-default);
+  text-align: center;
+}
+.llv-login__logo { height: 40px; margin: 0 auto 24px; display: block; }
+.llv-login form { display: grid; gap: 12px; text-align: left; }
+.llv-login label { font-size: 13px; color: var(--color-gray-300); }
+.llv-login .err { color: var(--danger); font-size: 12px; margin-top: -4px; }
+.llv-login .actions { margin-top: 8px; display: flex; flex-direction: column; gap: 8px; align-items: stretch; }
+.llv-login .actions .llv-btn { width: 100%; }
+
+/* ---------- Dialog ---------- */
+.llv-dialog-backdrop {
+  position: fixed; inset: 0;
+  background: rgba(20,22,23,.35);
+  display: grid; place-items: center;
+  z-index: 50;
+}
+.llv-dialog {
+  width: 500px; background: #fff; border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-default);
+  display: flex; flex-direction: column;
+  max-height: 90vh;
+}
+.llv-dialog__header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; border-bottom: 1px solid var(--border-subtle); }
+.llv-dialog__header h2 { margin: 0; color: var(--color-primary-500); font-size: 16px; }
+.llv-dialog__body { padding: 20px; overflow: auto; font-size: 13px; }
+.llv-dialog__footer { padding: 12px 20px; display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid var(--border-subtle); }
+
+/* ---------- Banner ---------- */
+.llv-banner {
+  background: var(--color-yellow-500);
+  color: var(--color-gray-900);
+  padding: 6px 40px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex; align-items: center; gap: 8px;
+}
+
+/* ---------- Spinner ---------- */
+.llv-spinner {
+  width: 30px; height: 30px;
+  border-radius: 100px;
+  border: 3px solid var(--color-primary-100);
+  border-top-color: var(--color-primary-500);
+  animation: llv-spin 1s linear infinite;
+  display: inline-block;
+}
+@keyframes llv-spin { to { transform: rotate(360deg); } }

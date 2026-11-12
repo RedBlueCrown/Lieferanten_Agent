@@ -1,0 +1,261 @@
+/* ============================================================
+   LLV Design System — Colors & Type
+   Source of truth: js-design-system/projects/llv/ux/styles/
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2'),
+       url("<embedded-font>") format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2'),
+       url("<embedded-font>") format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2'),
+       url("<embedded-font>") format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2'),
+       url("<embedded-font>") format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url("<embedded-font>") format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Base color tokens ---------- */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Primary — LLV blue */
+  --color-primary-50:  #e3ecf5;
+  --color-primary-100: #b9cee5;
+  --color-primary-200: #8baed4;
+  --color-primary-300: #5d8ec2;
+  --color-primary-400: #3a75b5;
+  --color-primary-500: #175da8;  /* brand */
+  --color-primary-600: #1455a0;
+  --color-primary-700: #114b97;  /* hover/active */
+  --color-primary-800: #0d418d;
+  --color-primary-900: #07307d;
+
+  /* Neutral — Grey */
+  --color-gray-10:  #f8f8f8;
+  --color-gray-20:  #f3f3f3;
+  --color-gray-30:  #eeeeee;
+  --color-gray-40:  #ebebeb;
+  --color-gray-50:  #e7e7e7;
+  --color-gray-100: #c2c2c3;
+  --color-gray-200: #999a9c;
+  --color-gray-300: #707274;
+  --color-gray-400: #525356;
+  --color-gray-500: #333538;
+  --color-gray-600: #2e3032;
+  --color-gray-700: #27282b;
+  --color-gray-800: #202224;
+  --color-gray-900: #141617;
+
+  /* Accent — Yellow (warning/highlight) */
+  --color-yellow-50:  #fff8e0;
+  --color-yellow-100: #feedb3;
+  --color-yellow-200: #fee180;
+  --color-yellow-300: #fed54d;
+  --color-yellow-400: #fdcc26;
+  --color-yellow-500: #fdc300;
+  --color-yellow-600: #fdbd00;
+  --color-yellow-700: #fcb500;
+  --color-yellow-800: #fcae00;
+  --color-yellow-900: #fca100;
+
+  /* Semantic — Red (error/destructive) */
+  --color-red-50:  #fce6e8;
+  --color-red-100: #f7c0c5;
+  --color-red-200: #f1969e;
+  --color-red-300: #eb6c77;
+  --color-red-400: #e74d5a;
+  --color-red-500: #e32d3d;
+  --color-red-600: #e02837;
+  --color-red-700: #dc222f;
+  --color-red-800: #d81c27;
+  --color-red-900: #d0111a;
+
+  /* Semantic — Green (success) */
+  --color-green-50:  #e0efe8;
+  --color-green-100: #b3d8c6;
+  --color-green-200: #80bea0;
+  --color-green-300: #4da479;
+  --color-green-400: #26915d;
+  --color-green-500: #007d40;
+  --color-green-600: #00753a;
+  --color-green-700: #006a32;
+  --color-green-800: #00602a;
+  --color-green-900: #004d1c;
+
+  /* ---------- Semantic aliases ---------- */
+  --bg:          var(--color-white);
+  --bg-subtle:   var(--color-gray-10);
+  --bg-muted:    var(--color-gray-20);
+  --surface:     var(--color-white);
+  --surface-alt: var(--color-gray-20);
+
+  --fg:          var(--color-black);          /* body text */
+  --fg-muted:    var(--color-gray-300);       /* h3, h4, secondary */
+  --fg-subtle:   var(--color-gray-200);       /* placeholder, hints */
+  --fg-disabled: var(--color-gray-100);
+  --fg-inverse:  var(--color-white);
+
+  --link:        var(--color-primary-500);
+  --link-hover:  var(--color-primary-700);
+
+  --brand:       var(--color-primary-500);    /* LLV blue */
+  --brand-hover: var(--color-primary-700);
+  --accent:      var(--color-yellow-500);     /* LLV yellow */
+  --danger:      var(--color-red-500);
+  --success:     var(--color-green-500);
+  --warning:     var(--color-yellow-500);
+
+  --border:        var(--color-gray-100);
+  --border-subtle: var(--color-gray-50);
+  --border-strong: var(--color-gray-300);
+  --border-focus:  var(--color-primary-500);
+
+  /* ---------- Type ---------- */
+  --font-family:       'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-icons: 'Font Awesome 5 Pro', 'Font Awesome 5 Free', 'Font Awesome 6 Free', sans-serif;
+
+  --font-weight-light:    300;
+  --font-weight-normal:   400;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-black:    800;
+
+  /* Numeric scale, matches _sizes.scss */
+  --font-size-1:  11px;  /* micro */
+  --font-size-2:  12px;  /* caption */
+  --font-size-3:  13px;  /* body */
+  --font-size-4:  14px;  /* body+ */
+  --font-size-5:  15px;  /* h2/h3/h4 */
+  --font-size-s:  16px;  /* lead */
+  --font-size-m:  22px;  /* h1 */
+  --font-size-l:  24px;
+  --font-size-xxl: 28px;
+
+  --line-height-tight:   1.2;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.6;
+
+  /* ---------- Spacing (margin/padding) ---------- */
+  --space-s:   5px;
+  --space-m:  10px;
+  --space-l:  20px;
+  --space-xl: 25px;
+  --space-xxl: 30px;
+
+  /* ---------- Radii ---------- */
+  --radius-sm:   2px;     /* default inputs/cards */
+  --radius-full: 100px;   /* pill buttons */
+
+  /* ---------- Elevation ---------- */
+  --shadow-default:
+    rgba(0,0,0,0.30) 0 3px 3px -2px,
+    rgba(0,0,0,0.15) 0 3px 4px 0,
+    rgba(0,0,0,0.15) 0 1px 8px 0;
+  --shadow-tooltip: 5px 5px 10px 0 rgba(0,0,0,0.20);
+  --shadow-sidebar: 5px 5px 10px var(--color-gray-200);
+
+  /* ---------- Component metrics ---------- */
+  --button-height:        34px;
+  --button-icon-size:     20px;
+  --input-height:         34px;
+  --header-height:        50px;
+  --header-height-compact:40px;
+  --sidebar-width:        60px;
+  --sidebar-item-height:  60px;
+  --avatar-size:          60px;
+}
+
+/* ---------- Semantic element defaults ---------- */
+html, body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-3);
+  color: var(--fg);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  background: var(--bg);
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-m);      /* 22px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-500);    /* LLV blue */
+  margin: 0 0 var(--space-l);
+}
+h2 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-5);      /* 15px */
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-500);
+  margin: 0 0 var(--space-m);
+}
+h3 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-300);
+  margin: 0 0 var(--space-m);
+}
+h4 {
+  font-family: var(--font-family);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-gray-300);
+  margin: 0 0 var(--space-s);
+}
+p {
+  font-family: var(--font-family);
+  font-size: var(--font-size-3);
+  color: var(--color-black);
+  font-weight: var(--font-weight-normal);
+  margin: 0 0 var(--space-m);
+}
+a {
+  font-family: var(--font-family);
+  color: var(--link);
+  font-size: inherit;
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+}
+a:hover { cursor: pointer; text-decoration: underline; color: var(--link-hover); }
+
+small, .caption { font-size: var(--font-size-2); color: var(--fg-muted); }
+code, pre { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: var(--font-size-3); }
