@@ -7,7 +7,7 @@ import { addMonths, CONTRACT_TYPES, dateCH, type ReviewStandard } from '@vm/doma
 import { api, ApiError } from '../lib/api';
 import { useStage } from '../agent/store';
 import { IconFile, IconSpark, IconUpload } from '../components/icons';
-import { Field, PageHead, Panel } from '../components/ui';
+import { DateInput, Field, PageHead, Panel } from '../components/ui';
 
 type Mode = 'llv_entwurf' | 'lieferantenpapier';
 
@@ -147,8 +147,8 @@ export function NeuerVorgang() {
               <textarea id="f-subject" className="textarea" value={subject} onChange={(e) => setSubject(e.target.value)} aria-invalid={!!errors.subject} placeholder="Betrieb und Weiterentwicklung der Datenplattform des Amts für Statistik inklusive Support" />
             </Field>
             <div className="form-grid">
-              <Field label="Vertragsbeginn" hint={`Ende: ${dateCH(addMonths(start, term)) }`}>
-                <input className="input" type="date" lang="de-CH" value={start} onChange={(e) => setStart(e.target.value)} />
+              <Field label="Vertragsbeginn" hint={`Ende: ${dateCH(addMonths(start, term))}`}>
+                <DateInput value={start} onChange={(iso) => iso && setStart(iso)} />
               </Field>
               <Field label="Feste Laufzeit (Monate)" error={errors.term} hint={term > HINTS.termMonths ? `Über dem Standard von höchstens ${HINTS.termMonths} Monaten: Abweichung.` : `Standard: höchstens ${HINTS.termMonths}`}>
                 <input id="f-term" className="input" type="number" inputMode="numeric" min={1} max={120} value={term} onChange={(e) => setTerm(Number(e.target.value))} />

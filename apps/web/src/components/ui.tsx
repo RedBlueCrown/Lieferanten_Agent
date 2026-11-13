@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { Link } from 'react-router';
 import { Dialog as BDialog } from '@base-ui/react/dialog';
 import clsx from 'clsx';
@@ -182,5 +182,47 @@ export function CaseTrack({ status }: { status: CaseStatus }) {
         );
       })}
     </ol>
+  );
+}
+
+/**
+ * Date in the Swiss format (TT.MM.JJJJ) regardless of the browser language;
+ * the value stays ISO (JJJJ-MM-TT).
+ */
+export function DateInput({ value, onChange, disabled, id, invalid }: { value: string; onChange: (iso: string) => void; disabled?: boolean; id?: string; invalid?: boolean }) {
+  const toCh = (iso: string) => (/^\d{4}-\d{2}-\d{2}$/.test(iso) ? `${iso.slice(8, 10)}.${iso.slice(5, 7)}.${iso.slice(0, 4)}` : '');
+  const [text, setText] = useState(toCh(value));
+  const [bad, setBad] = useState(false);
+  useEffect(() => setText(toCh(value)), [value]);
+  const parse = (t: string): string | null => {
+    const m = /^(\d{1,2})\.(\d{1,2})\.(\d{4})$/.exec(t.trim());
+    if (!m) return /^\d{4}-\d{2}-\d{2}$/.test(t.trim()) ? t.trim() : null;
+    const iso = `${m[3]}-${m[2].padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+    const d = new Date(iso + 'T00:00:00Z');
+    return !Number.isNaN(d.getTime()) && d.toISOString().slice(0, 10) === iso ? iso : null;
+  };
+  return (
+    <input
+      id={id}
+      className="input num"
+      inputMode="numeric"
+      placeholder="TT.MM.JJJJ"
+      value={text}
+      disabled={disabled}
+      aria-invalid={bad || invalid}
+      onChange={(e) => {
+        setText(e.target.value);
+        const iso = parse(e.target.value);
+        if (iso) {
+          setBad(false);
+          onChange(iso);
+        } else if (!e.target.value.trim()) onChange('');
+      }}
+      onBlur={() => {
+        const iso = parse(text);
+        setBad(!!text.trim() && !iso);
+        if (iso) setText(toCh(iso));
+      }}
+    />
   );
 }

@@ -1,13 +1,15 @@
 # Vertragsmanagement: Verbesserungen und Zielbild
 
-Stand 12.11.2026. Grundlage ist der Prototyp v0.9.0 in [`prototype/`](../prototype/). Die Quelltexte sind dort entpackt (`prototype/src/`), Verweise in diesem Dokument zeigen auf diese Dateien.
+Stand 13.11.2026. Grundlage ist der Prototyp v0.9.0 in [`prototype/`](../prototype/). Die Quelltexte sind dort entpackt (`prototype/src/`), Verweise in diesem Dokument zeigen auf diese Dateien.
+
+> **Umsetzung.** Die Anwendung ist gebaut (siehe [README](../README.md)). Die Entscheide aus Abschnitt 12 sind gefallen und dort festgehalten. Die Rollen heissen in der Anwendung Projektleitung (Fabian), Lieferantenmanagement (Björn) und Rechtsdienst (Marco); wo dieses Dokument «Vertragsmanagement» als Rolle nennt, ist das Lieferantenmanagement gemeint.
 
 ## Kurzfassung
 
 Der Prototyp trifft den Kern: Fristen werden nach festen Regeln überwacht, die KI liest, entwirft und prüft, und Menschen entscheiden. Für eine produktive Anwendung braucht es vor allem fünf Dinge:
 
 1. **Eine Fristenlogik, die weiterrechnet.** Nach einer automatischen Verlängerung bleibt das alte Vertragsende stehen; der nächste Kündigungstermin wird nie berechnet. Kündigungsmodus (Monats-, Jahres-, Laufzeitende) und Zustellfrist fehlen.
-2. **Drei klar geschnittene Rollen.** Vertragsmanagement (Einkauf), Projektleitung und Rechtsdienst. Die Rolle «Beschaffung» im Prototyp ist in Wahrheit die Projektleitung. Eine Amtsleitung gibt es nicht.
+2. **Drei klar geschnittene Rollen.** Lieferantenmanagement (Einkauf), Projektleitung und Rechtsdienst. Die Rolle «Beschaffung» im Prototyp ist in Wahrheit die Projektleitung. Eine Amtsleitung gibt es nicht.
 3. **Vier ausdrückliche Haltepunkte**, an denen der Ablauf auf einen Menschen wartet: Daten bestätigen, Entwurf einreichen, rechtlich entscheiden, Fristentscheid.
 4. **Ein geschlossener Lebenszyklus.** Heute endet der Weg bei der rechtlichen Freigabe; die Unterzeichnung und der Abgleich der unterzeichneten mit der freigegebenen Fassung fehlen.
 5. **API zuerst.** Alles, was die Oberfläche kann, kann auch ein Drittsystem: Verträge und Dokumente einliefern, Daten und Fristen abholen, über Webhooks benachrichtigt werden.
@@ -24,7 +26,7 @@ Dazu kommen Fehler, die vor dem Einsatz behoben werden müssen (Abschnitt 4.6), 
 - **Regel «AVV fehlt bei L3/L4-Anwendung»** und die Verknüpfung von Lieferantenklasse A/B/C mit den Anwendungs-Levels L0 bis L4.
 - **Erledigen mit Ergebnis** (gekündigt, verlängert, läuft aus) statt blossem Abhaken.
 - **Lieferantenbeurteilung** mit KPI, Risiko und Massnahmenplan.
-- **Das LLV Design System** (Farben, Open Sans, `llv-*`-Komponenten). Die Marke bleibt.
+- **Das Erscheinungsbild** (LLV-Blau, Logo). Es stammt aus dem eigenen Prototyp, nicht aus einem offiziellen Design System der LLV; die Anwendung übernimmt Blau und Logo und baut darauf neu auf.
 - **Transparenz** über Ablageort und Datenstandort der KI-Verarbeitung.
 
 ---
@@ -35,9 +37,9 @@ Drei Rollen für Menschen, dazu technische Zugänge. Die Rollen kommen aus Grupp
 
 | Rolle | Im Prototyp | Aufgabe | Startseite | Haltepunkte | Sieht |
 | --- | --- | --- | --- | --- | --- |
-| **Vertragsmanagement** (Einkauf) | «Lieferantenmanagement» | Register führen, Verträge erfassen, Fristen überwachen, Lieferanten beurteilen, auswerten | Fristen | H1, H4 | alle Verträge und Lieferanten, schreibend |
-| **Projektleitung** | «Beschaffung» | Bedarf anmelden, Entwurf erstellen, Lieferantenpapier einreichen, Nachverhandlung führen | Meine Vorgänge | H2 | eigene Vorgänge; Verträge und Lieferanten der eigenen Organisationseinheit lesend |
-| **Rechtsdienst** | «Rechtsdienst» | Verträge prüfen, Prüfstandards und Textbausteine pflegen, Ausnahmen genehmigen | Prüf-Eingang | H3 | alle Verträge lesend, Prüfstandards schreibend |
+| **Lieferantenmanagement** (Einkauf, Björn) | «Lieferantenmanagement» | Register führen, Verträge erfassen, Fristen überwachen, Lieferanten beurteilen, auswerten | Fristen | H1, H4 | alle Verträge und Lieferanten, schreibend |
+| **Projektleitung** (Fabian) | «Beschaffung» | Bedarf anmelden, Entwurf erstellen, Lieferantenpapier einreichen, Nachverhandlung führen | Meine Vorgänge | H2 | eigene Vorgänge; Verträge und Lieferanten der eigenen Organisationseinheit lesend |
+| **Rechtsdienst** (Marco) | «Rechtsdienst» | Verträge prüfen, Prüfstandards und Textbausteine pflegen, Ausnahmen genehmigen | Prüf-Eingang | H3 | alle Verträge lesend, Prüfstandards schreibend |
 
 Ergänzend:
 
@@ -65,20 +67,20 @@ Ein Agent ändert nie selbst einen Status oder einen Stammdatensatz. Er erzeugt 
 
 | | Haltepunkt | Wer | Entscheidet über | Pflicht | Danach |
 | --- | --- | --- | --- | --- | --- |
-| **H1** | Daten bestätigen | Vertragsmanagement | die ausgelesenen Vertragsdaten | Felder unter 80 % Konfidenz und jede Abweichung zur freigegebenen Fassung einzeln bestätigen | Vertrag ist aktiv, Fristen zählen |
+| **H1** | Daten bestätigen | Lieferantenmanagement | die ausgelesenen Vertragsdaten | Felder unter 80 % Konfidenz und jede Abweichung zur freigegebenen Fassung einzeln bestätigen | Vertrag ist aktiv, Fristen zählen |
 | **H2** | Entwurf einreichen | Projektleitung | ob der Entwurf vollständig ist | jede Abweichung vom Textbaustein begründen | Prüfauftrag an den Rechtsdienst mit Prüffrist |
 | **H3** | Rechtlich entscheiden | Rechtsdienst | Freigabe oder Nachverhandlung | rote Punkte nur mit Ausnahme-Begründung freigeben | Freigabe: «Zur Unterzeichnung»; sonst Verhandlungspunkte an die Projektleitung |
-| **H4** | Fristentscheid | Vertragsmanagement, mit der Fachverantwortung | kündigen, verlängern, neu verhandeln oder auslaufen lassen | Ergebnis und kurze Begründung | Kündigung: Schreiben aus Vorlage und Termin für den Zustellnachweis; neu verhandeln: neuer Vorgang für die Projektleitung |
+| **H4** | Fristentscheid | Lieferantenmanagement, mit der Fachverantwortung | kündigen, verlängern, neu verhandeln oder auslaufen lassen | Ergebnis und kurze Begründung | Kündigung: Schreiben aus Vorlage und Termin für den Zustellnachweis; neu verhandeln: neuer Vorgang für die Projektleitung |
 
 ### 3.3 Ablauf
 
 ```mermaid
 flowchart TD
   E1["Bestehender Vertrag<br/>PDF, API oder Excel-Import"] --> A1["KI: Daten auslesen<br/>mit Fundstellen"]
-  A1 --> H1{{"H1 Daten bestätigen<br/>Vertragsmanagement"}}
+  A1 --> H1{{"H1 Daten bestätigen<br/>Lieferantenmanagement"}}
   H1 --> REG[("Vertragsregister")]
   REG --> R1["Regel: Fristen berechnen<br/>und überwachen"]
-  R1 --> H4{{"H4 Fristentscheid<br/>Vertragsmanagement"}}
+  R1 --> H4{{"H4 Fristentscheid<br/>Lieferantenmanagement"}}
   H4 -- "verlängern / auslaufen" --> REG
   H4 -- "neu verhandeln" --> E2
 
@@ -132,7 +134,7 @@ Jeder Übergang ist eine Regel in einer Übergangstabelle mit erlaubter Rolle un
 | **Prüfung** | Vertragstext, Prüfstandard in fester Version | je Kriterium: Fundstelle oder «fehlt», Ampel, Begründung, Gegenvorschlag | H3 |
 | **Entwurf** | Angaben aus dem Assistenten, Textbausteine | Entwurf; die KI formuliert nur ausgewiesene Freitextfelder (z. B. Gegenstand), Textbausteine bleiben wortgleich | H2 |
 | **Abgleich** (neu) | unterzeichnete und freigegebene Fassung | Liste der Abweichungen mit beiden Textstellen | H1 |
-| **Massnahmen** | Lieferantenbeurteilung | Vorschlag für den Massnahmenplan | Speichern durch Vertragsmanagement |
+| **Massnahmen** | Lieferantenbeurteilung | Vorschlag für den Massnahmenplan | Speichern durch Lieferantenmanagement |
 
 Regeln für alle Agenten:
 
@@ -226,7 +228,7 @@ Die Fristenlogik ist reiner, getesteter Code ohne KI und läuft als täglicher, 
 
 ## 5. Bedienung je Rolle
 
-### 5.1 Vertragsmanagement: Fristen
+### 5.1 Lieferantenmanagement: Fristen
 
 Die Startseite ist die Fristenliste, nicht eine Begrüssung über vier Kennzahlen. Gruppiert nach Dringlichkeit, mit dem Entscheid direkt in der Zeile:
 
@@ -395,8 +397,8 @@ Jede Zustellung ist mit HMAC signiert, trägt eine eindeutige Kennung und wird b
     "external_refs": [{ "system": "erp", "id": "K-40231-7" }],
     "kind": "notice",
     "act_by": "2026-11-23",
-    "notice_effective": "2026-11-28",
-    "consequence": "verlängert sich um 12 Monate bis 28.02.2028",
+    "notice_effective": "2026-11-30",
+    "consequence": "verlängert sich um 12 Monate bis 29.02.2028",
     "annual_value": { "amount": 58000, "currency": "CHF" }
   }
 }
@@ -419,7 +421,7 @@ Jede Zustellung ist mit HMAC signiert, trägt eine eindeutige Kennung und wird b
 - API: Node.js mit Fastify, Zod-Schemas für Prüfung und OpenAPI-Beschreibung, Drizzle als Datenbankzugriff, PostgreSQL, pg-boss für Aufträge.
 - Gemeinsames Paket für Fachlogik und Schemas, das Web und API nutzen.
 
-**Zu beachten**: Die Vorlagen im LLV Design System sind Angular (`@llv/ux`, angelehnt an PrimeNG) mit Keycloak-Anmeldung. Soll die Anwendung später von der Informatik der LLV betrieben werden, ist Angular mit `@llv/ux` für die Oberfläche die bessere Wahl. API und Fachlogik bleiben davon unberührt. Das ist Entscheidung 1 unten.
+**Entschieden**: React. Das Erscheinungsbild des Prototyps ist ein eigenes, kein offizielles Design System der LLV; damit spricht nichts für einen Wechsel auf Angular.
 
 **Bibliotheken für die Oberfläche** (React), ausgewählt mit dem Skill *pick-ui-library* (`.claude/skills/pick-ui-library`):
 
@@ -462,11 +464,15 @@ Die visuelle Überarbeitung (Abschnitt 6) läuft in Etappe 1 mit, beginnend bei 
 
 ---
 
-## 12. Offene Entscheidungen
+## 12. Entscheide
 
-1. **Oberfläche**: React (schneller Pilot, Bibliotheken wie in Abschnitt 9) oder Angular mit `@llv/ux` (Standard der LLV-Informatik)? Empfehlung: React für den Pilot, sofern der spätere Betrieb nicht schon feststeht.
-2. **Rechtsrahmen**: Der Prototyp ist auf die Liechtensteinische Landesverwaltung ausgelegt (CHF, liechtensteinisches Recht, Gerichtsstand Vaduz, Landesindex der Konsumentenpreise). Bleibt das so, oder ist eine Organisation in Deutschland gemeint (EUR, deutsches Recht, andere Prüfstandards)?
-3. **Quellsystem**: Welche Systeme liefern Daten ein und welche sollen Daten erhalten (ERP oder Finanzbuchhaltung, Beschaffungsplattform, SharePoint, E-Signatur)?
-4. **Anmeldung**: Entra ID (wie im Prototyp) oder Keycloak (wie in den LLV-Vorlagen)?
-5. **KI-Anbieter und Betrieb**: Azure OpenAI wie im Prototyp oder ein anderer Anbieter mit Verarbeitung in der Schweiz oder im EWR; Betrieb auf eigener Infrastruktur oder in der Cloud?
-6. **Sichtbarkeit für die Projektleitung**: nur eigene Vorgänge, oder alle Verträge der eigenen Organisationseinheit lesend (Vorschlag in Abschnitt 2)?
+| Frage | Entscheid |
+| --- | --- |
+| Oberfläche | React mit TypeScript; Bibliotheken nach *pick-ui-library* (Abschnitt 9). |
+| Rechtsrahmen | Liechtensteinische Landesverwaltung: CHF, liechtensteinisches Recht, Gerichtsstand Vaduz, liechtensteinische Feiertage in der Fristenlogik. |
+| Betrieb | Azure, Region Schweiz Nord: Container Apps, Azure Database for PostgreSQL, Azure OpenAI, Document Intelligence, Communication Services, Event Grid, Key Vault, Blob Storage (unveränderliches Audit-Archiv), Application Insights. Details in [azure-deployment.md](azure-deployment.md). Die öffentlichen Anwendungen der LLV konnten aus der Entwicklungsumgebung nicht eingesehen werden (Netzwerksperre); die Wahl folgt den Empfehlungen von Microsoft für Behördenanwendungen und sollte mit der LLV-Informatik abgeglichen werden. |
+| Dokumente | Ein freigegebener OneDrive-Ordner eines persönlichen Kontos. Die Anwendung meldet sich mit einem eigenen Microsoft-Konto an, mit dem nur dieser Ordner geteilt ist; niemand muss sich mit dem eigenen Konto anmelden. Siehe [onedrive-setup.md](onedrive-setup.md). |
+| Prüfstandards | Word-Dokumente des Rechtsdienstes im OneDrive-Ordner «Prüfstandards»; später eine SharePoint-Liste mit derselben Struktur. |
+| Anmeldung | Microsoft Entra ID, für den Pilot simuliert (gleiche Token-Form, Umstellung per Konfiguration). |
+| Rollen | Projektleitung (Fabian), Lieferantenmanagement (Björn), Rechtsdienst (Marco). Keine Amtsleitung. |
+| Audit | Jede Aktion wird protokolliert: Anmeldungen, Seitenaufrufe, Änderungen mit Vorher und Nachher, KI-Läufe, Entscheide, Downloads. Hash-verkettet, in Azure zusätzlich unveränderlich im Blob Storage. |

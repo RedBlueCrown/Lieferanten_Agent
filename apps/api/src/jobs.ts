@@ -65,11 +65,13 @@ export class JobHub {
       live.listeners.forEach((l) => l(s));
     };
     const started = Date.now();
+    // Runs that belong to a case appear in the case's history.
+    const caseId = typeof opts.subject.caseId === 'string' ? opts.subject.caseId : null;
+    const target = caseId ? { targetType: 'vorgang', targetId: caseId } : { targetType: 'job', targetId: id };
     await this.audit.record({
       actor: opts.actor,
       action: `ai.${opts.kind}.gestartet`,
-      targetType: 'job',
-      targetId: id,
+      ...target,
       summary: `${opts.title} gestartet`,
       details: { subject: opts.subject, provider: opts.provider.name, model: opts.provider.model, promptVersion: opts.provider.promptVersion },
     });
@@ -84,10 +86,10 @@ export class JobHub {
         await this.audit.record({
           actor: { kind: 'ai', oid: `agent:${opts.kind}`, name: `KI ${opts.kind} (${opts.provider.model})` },
           action: `ai.${opts.kind}.abgeschlossen`,
-          targetType: 'job',
-          targetId: id,
+          ...target,
           summary: `${opts.title} abgeschlossen`,
           details: {
+            jobId: id,
             subject: opts.subject,
             provider: opts.provider.name,
             model: opts.provider.model,
@@ -103,7 +105,7 @@ export class JobHub {
         const message = err instanceof Error ? err.message : String(err);
         emit({ t: 'error', message });
         await this.db.query('update jobs set status=$2, events=$3, error=$4, finished_at=now() where id=$1', [id, 'failed', JSON.stringify(live.events), message]);
-        await this.audit.record({ actor: opts.actor, action: `ai.${opts.kind}.fehlgeschlagen`, targetType: 'job', targetId: id, summary: `${opts.title} fehlgeschlagen`, details: { error: message } });
+        await this.audit.record({ actor: opts.actor, action: `ai.${opts.kind}.fehlgeschlagen`, ...target, summary: `${opts.title} fehlgeschlagen`, details: { jobId: id, error: message } });
       } finally {
         live.done = true;
         live.listeners.forEach((l) => l({ t: 'stage', stage: '__end', label: '', service: '', status: 'done', seq: -1, ms: 0 } as StampedEvent));

@@ -7,7 +7,7 @@ import { CONTRACT_TYPES, dateCH, EXTRACT_FIELDS, NOTICE_MODE_LABEL, type Extract
 import { api, ApiError } from '../lib/api';
 import { useStage } from '../agent/store';
 import { IconCheck, IconFile, IconSpark, IconUpload } from '../components/icons';
-import { Empty, ErrorBox, Field, Loadable, PageHead, Panel, Skeleton, Status } from '../components/ui';
+import { DateInput, Empty, ErrorBox, Field, Loadable, PageHead, Panel, Skeleton, Status } from '../components/ui';
 
 interface IngestJob {
   id: string;
@@ -264,7 +264,8 @@ export function ErfassungPruefen() {
           ))}
         </select>
       );
-    return <input className="input" type={kind === 'date' ? 'date' : 'text'} inputMode={kind === 'number' ? 'decimal' : undefined} value={v} onChange={(e) => set(e.target.value)} disabled={resolved} />;
+    if (kind === 'date') return <DateInput value={v} onChange={set} disabled={resolved} />;
+    return <input className="input" type="text" inputMode={kind === 'number' ? 'decimal' : undefined} value={v} onChange={(e) => set(e.target.value)} disabled={resolved} />;
   };
 
   return (
@@ -365,7 +366,7 @@ export function ErfassungPruefen() {
                     <div className="cell-sub">von Ihnen festzulegen</div>
                   </td>
                   <td>
-                    <input className="input" type="date" value={values.review ?? ''} onChange={(e) => setValues({ ...values, review: e.target.value })} disabled={resolved} />
+                    <DateInput value={values.review ?? ''} onChange={(iso) => setValues({ ...values, review: iso })} disabled={resolved} />
                   </td>
                   <td />
                 </tr>

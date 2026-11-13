@@ -6,6 +6,7 @@
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import clsx from 'clsx';
 import { AGENT_LABEL, AMPEL_LABEL, EXTRACT_FIELDS, type Ampel, type LayoutPage, type StampedEvent } from '@vm/domain';
@@ -275,6 +276,22 @@ function Paper({ pages, scan, scanned, hits }: { pages: LayoutPage[]; scan: stri
 
 function Links({ links, root, onDone }: { links: Link[]; root: React.RefObject<HTMLDivElement | null>; onDone: (id: number) => void }) {
   const [paths, setPaths] = useState<{ id: number; d: string; tone: Link['tone'] }[]>([]);
+  const [tick, setTick] = useState(0);
+  // Follow layout changes (cards growing, panels scrolling) while links are visible.
+  useEffect(() => {
+    if (!links.length) return;
+    const t = setInterval(() => setTick((x) => x + 1), 80);
+    return () => clearInterval(t);
+  }, [links.length]);
+  const seen = useRef(new Set<number>());
+  useEffect(() => {
+    for (const l of links) {
+      if (seen.current.has(l.id)) continue;
+      seen.current.add(l.id);
+      document.getElementById(l.to)?.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
+      setTimeout(() => onDone(l.id), 1400);
+    }
+  }, [links, onDone]);
   useLayoutEffect(() => {
     const r = root.current;
     if (!r) return;
@@ -295,11 +312,7 @@ function Links({ links, root, onDone }: { links: Link[]; root: React.RefObject<H
       })
       .filter(Boolean) as { id: number; d: string; tone: Link['tone'] }[];
     setPaths(next);
-  }, [links, root]);
-  useEffect(() => {
-    const timers = paths.map((p) => setTimeout(() => onDone(p.id), 1400));
-    return () => timers.forEach(clearTimeout);
-  }, [paths, onDone]);
+  }, [links, root, tick]);
   if (reduceMotion()) return null;
   return (
     <>
@@ -319,6 +332,7 @@ const fmtMs = (ms: number) => `${(ms / 1000).toFixed(1).replace('.', ',')} s`;
 
 function StageBody({ job }: { job: StageJob }) {
   const navigate = useNavigate();
+  const qc = useQueryClient();
   const me = useAuth((s) => s.me);
   const { minimize, close, setDone, minimized } = useStage();
   const [s, dispatch] = useReducer(reduce, undefined, initial);
@@ -346,6 +360,7 @@ function StageBody({ job }: { job: StageJob }) {
   useEffect(() => {
     if (!finished) return;
     setDone(true);
+    qc.invalidateQueries();
     track({ type: 'aktion', name: `KI-Ansicht beendet: ${job.title}`, details: { jobId: job.jobId, error: s.error } });
     if (useStage.getState().minimized) {
       toast.success(`${AGENT_LABEL[job.kind]} ist fertig`, { description: job.title, action: { label: job.resultLabel, onClick: () => { close(); navigate(job.resultPath); } } });

@@ -6,7 +6,10 @@
  * so the agent stage can be followed; the Azure provider runs at full speed.
  */
 import { criterionKey, type Ampel, type ExtractedField, type Finding } from '@vm/domain';
-import { sleep } from '../util';
+import { sleep as rawSleep } from '../util';
+
+// The demo agents pause between steps so the agent stage can be followed; tests skip that.
+const sleep = (ms: number) => (process.env.VITEST ? Promise.resolve() : rawSleep(ms));
 import { allLines } from './reader';
 import type { AiProvider, Clause, DraftParams, Emit, ExtractInput, ExtractOutput, ReviewInput } from './types';
 
@@ -77,53 +80,61 @@ function findFields(lines: { page: number; line: number; text: string }[]): Hit[
     add({ key: 'typ', value: t?.[1] ?? 'Einzelvertrag', quote: lines[0]?.text.slice(0, 80) ?? '', page: 0, line: 0, confidence: t ? 0.78 : 0.55, note: 'Bestimme die Vertragsart aus dem Inhalt' });
   }
 
-  for (const l of lines) {
-    const t = l.text;
+  lines.forEach((l, i) => {
+    // Phrases often wrap onto the next line: match on this line plus the
+    // next one, but only accept matches that start on this line.
+    const next = lines[i + 1] && lines[i + 1].page === l.page ? lines[i + 1].text : '';
+    const t = next ? `${l.text} ${next}` : l.text;
+    const own = l.text.length;
+    const exec = (re: RegExp) => {
+      const r = re.exec(t);
+      return r && r.index < own ? r : null;
+    };
     let m: RegExpExecArray | null;
-    if ((m = /(?:und|sowie)\s+(?:der|die|dem)\s+([A-ZÄÖÜ][\w&.\- ]+?\s(?:AG|GmbH|SA|Ltd\.?|Anstalt|Est\.|KG))/.exec(t))) {
+    if ((m = exec(/(?:und|sowie)\s+(?:der|die|dem)\s+([A-ZÄÖÜ][\w&.\- ]+?\s(?:AG|GmbH|SA|Ltd\.?|Anstalt|Est\.|KG))/))) {
       add({ key: 'lieferant', value: m[1].trim(), quote: m[0].replace(/^(und|sowie)\s+(der|die|dem)\s+/, ''), page: l.page, line: l.line, confidence: 0.97, note: 'Suche die Vertragsparteien' });
     }
-    if ((m = /(?:beginnt|tritt)\s+(?:am|per|mit)\s+(\d{1,2}\.\s*[A-Za-zäöü]+\s+\d{4}|\d{1,2}\.\d{1,2}\.\d{4})/.exec(t)) && germanDate(m[1])) {
+    if ((m = exec(/(?:beginnt|tritt)\s+(?:am|per|mit)\s+(\d{1,2}\.\s*[A-Za-zäöü]+\s+\d{4}|\d{1,2}\.\d{1,2}\.\d{4})/)) && germanDate(m[1])) {
       add({ key: 'beginn', value: germanDate(m[1])!, quote: m[0], page: l.page, line: l.line, confidence: 0.98, note: 'Lese den Vertragsbeginn' });
     }
-    if ((m = /(?:gilt|läuft|dauert)\s+bis\s+(?:zum\s+)?(\d{1,2}\.\s*[A-Za-zäöü]+\s+\d{4}|\d{1,2}\.\d{1,2}\.\d{4})/.exec(t)) && germanDate(m[1])) {
+    if ((m = exec(/(?:gilt|läuft|dauert)\s+bis\s+(?:zum\s+)?(\d{1,2}\.\s*[A-Za-zäöü]+\s+\d{4}|\d{1,2}\.\d{1,2}\.\d{4})/)) && germanDate(m[1])) {
       add({ key: 'ende', value: germanDate(m[1])!, quote: m[0], page: l.page, line: l.line, confidence: 0.98, note: 'Lese das Laufzeitende' });
     }
-    if ((m = /verlängert sich[^.]*?um\s+(?:jeweils\s+)?(?:weitere\s+)?(\d+|ein|zwei|drei)\s+(Monate|Jahre?)/i.exec(t))) {
+    if ((m = exec(/verlängert sich[^.]*?um\s+(?:jeweils\s+)?(?:weitere\s+)?(\d+|ein|zwei|drei)\s+(Monate|Jahre?)/i))) {
       const n = num(m[1]) * (m[2].toLowerCase().startsWith('jahr') ? 12 : 1);
       add({ key: 'verlaengerung', value: String(n), quote: m[0], page: l.page, line: l.line, confidence: 0.94, note: 'Prüfe die automatische Verlängerung' });
     }
-    if ((m = /Frist von\s+(\d+|einem|drei|sechs|zwölf)\s+(Monat(?:en)?|Tagen)/i.exec(t))) {
+    if ((m = exec(/Frist von\s+(\d+|einem|drei|sechs|zwölf)\s+(Monat(?:en)?|Tagen)/i))) {
       const months = m[2].toLowerCase().startsWith('tag') ? Math.max(1, Math.round(num(m[1]) / 30)) : num(m[1]);
       add({ key: 'kuendigungsfrist', value: String(months), quote: m[0], page: l.page, line: l.line, confidence: 0.96, note: 'Lese die Kündigungsfrist' });
       const mode = /ende eines (kalender)?monats/i.test(t) ? 'monatsende' : /quartal/i.test(t) ? 'quartalsende' : /(kalender)?jahres/i.test(t) ? 'jahresende' : 'laufzeitende';
       add({ key: 'kuendigungsmodus', value: mode, quote: m[0], page: l.page, line: l.line, confidence: /ende/i.test(t) ? 0.9 : 0.7, note: 'Bestimme, auf welchen Termin gekündigt werden kann' });
     }
-    if (/CHF/.test(t) && !hits.some((h) => h.key === 'wert')) {
-      const v = money(t);
+    if (/CHF/.test(l.text) && !hits.some((h) => h.key === 'wert')) {
+      const v = money(l.text);
       if (v) {
-        const monthly = /pro monat|monatlich/i.test(t);
-        add({ key: 'wert', value: String(monthly ? v * 12 : v), quote: (/CHF[^,;.]*/.exec(t) ?? [t])[0].slice(0, 80), page: l.page, line: l.line, confidence: /jahr|jährlich/i.test(t) ? 0.97 : 0.8, note: 'Ermittle die Vergütung' });
+        const monthly = /pro monat|monatlich/i.test(l.text);
+        add({ key: 'wert', value: String(monthly ? v * 12 : v), quote: (/CHF[^,;.]*/.exec(l.text) ?? [l.text])[0].slice(0, 80), page: l.page, line: l.line, confidence: /jahr|jährlich/i.test(l.text) ? 0.97 : 0.8, note: 'Ermittle die Vergütung' });
       }
     }
-    if ((m = /(liechtensteinische|schweizerische|schweizer|österreichische|deutsche)s?\s+Recht/i.exec(t))) {
+    if ((m = exec(/(liechtensteinische|schweizerische|schweizer|österreichische|deutsche)s?\s+Recht/i))) {
       const map: Record<string, string> = { liechtensteinische: 'FL', schweizerische: 'CH', schweizer: 'CH', österreichische: 'AT', deutsche: 'DE' };
       add({ key: 'recht', value: map[m[1].toLowerCase()] ?? m[1], quote: m[0], page: l.page, line: l.line, confidence: 0.99, note: 'Bestimme das anwendbare Recht' });
     }
-    if ((m = /Gerichtsstand\s+(?:ist\s+)?([A-ZÄÖÜ][a-zäöü]+)/.exec(t))) {
+    if ((m = exec(/Gerichtsstand\s+(?:ist\s+)?([A-ZÄÖÜ][a-zäöü]+)/))) {
       add({ key: 'gerichtsstand', value: m[1], quote: m[0], page: l.page, line: l.line, confidence: 0.99, note: 'Lese den Gerichtsstand' });
     }
-    if ((m = /Ansprechpartner(?:in)?(?:\s+Lieferant)?:\s*([A-ZÄÖÜ][a-zäöü]+\s+[A-ZÄÖÜ][a-zäöü]+)/.exec(t))) {
+    if ((m = exec(/Ansprechpartner(?:in)?(?:\s+Lieferant)?:\s*([A-ZÄÖÜ][a-zäöü]+\s+[A-ZÄÖÜ][a-zäöü]+)/))) {
       add({ key: 'kontakt', value: m[1], quote: m[0], page: l.page, line: l.line, confidence: 0.97, note: 'Suche die Ansprechperson' });
     }
-    if ((m = /(?:Applikation|Anwendung|Software)\s+«([^»]+)»/.exec(t))) {
+    if ((m = exec(/(?:Applikation|Anwendung|Software)\s+«([^»]+)»/))) {
       add({ key: 'anwendung', value: m[1], quote: m[0], page: l.page, line: l.line, confidence: 0.9, note: 'Erkenne die betroffene Anwendung' });
     }
-    if ((m = /Verfügbarkeit\s+(?:von\s+)?(\d{2}(?:[.,]\d+)?)\s*%[^;.]*/.exec(t))) {
+    if ((m = exec(/Verfügbarkeit\s+(?:von\s+)?(\d{2}(?:[.,]\d+)?)\s*%[^;.]*/))) {
       const reakt = /Reaktion innert\s+(\d+)\s+Stunden?/.exec(t);
       add({ key: 'sla', value: `${m[1].replace(',', '.')} %${reakt ? ` / P1 Reaktion ${reakt[1]} h` : ''}`, quote: m[0].slice(0, 90), page: l.page, line: l.line, confidence: 0.91, note: 'Lese die Service Levels' });
     }
-  }
+  });
 
   const typ = hits.find((h) => h.key === 'typ')?.value ?? 'Vertrag';
   const app = hits.find((h) => h.key === 'anwendung');

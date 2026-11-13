@@ -48,7 +48,7 @@ function DateBlock({ d, today }: { d: Deadline; today: string }) {
 }
 
 function BoardRow({ d, today, onDecide }: { d: Deadline; today: string; onDecide: (d: Deadline, x: DeadlineDecision) => void }) {
-  const missed = d.term?.missed;
+  const missed = d.kind === 'verpasst' ? d.term?.missed : null;
   return (
     <li className={clsx('boardrow', `boardrow--${d.kind}`)}>
       <DateBlock d={d} today={today} />

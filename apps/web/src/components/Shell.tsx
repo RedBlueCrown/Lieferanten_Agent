@@ -24,7 +24,7 @@ const NAV: Record<Role, [string, string][]> = {
     ['/lieferanten', 'Lieferanten'],
     ['/vertraege', 'Verträge'],
     ['/erfassen', 'Erfassen'],
-    ['/ordner', 'Ordner und Schnittstellen'],
+    ['/ordner', 'Ordner und API'],
     ['/protokoll', 'Protokoll'],
   ],
   rechtsdienst: [

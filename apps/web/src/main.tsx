@@ -27,13 +27,14 @@ const qc = new QueryClient({ defaultOptions: { queries: { staleTime: 10_000, ret
 function App() {
   const token = useAuth((s) => s.token);
   const setMe = useAuth((s) => s.setMe);
+  const current = useAuth((s) => s.me);
   const me = useQuery({ queryKey: ['me', token], queryFn: () => api.get<Me>('/api/v1/me'), enabled: !!token });
   useEffect(() => {
     if (me.data) setMe(me.data);
   }, [me.data, setMe]);
 
   if (!token) return <Login />;
-  if (!me.data || !useAuth.getState().me) return <Skeleton rows={6} />;
+  if (!me.data || !current) return <Skeleton rows={6} />;
   return (
     <Routes>
       <Route element={<Shell />}>
