@@ -1,0 +1,21 @@
+{
+  "name": "vertragsmanagement",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,yellow \"npm run dev -w @vm/api\" \"npm run dev -w @vm/web\"",
+    "build": "npm run build -w @vm/api && npm run build -w @vm/web",
+    "start": "npm run start -w @vm/api",
+    "test": "vitest run",
+    "typecheck": "tsc -p packages/domain && tsc -p apps/api && tsc -p apps/web",
+    "seed": "npm run seed -w @vm/api"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "concurrently": "^9.1.0",
+    "typescript": "5.9.3",
+    "vitest": "3.2.7"
+  }
+}

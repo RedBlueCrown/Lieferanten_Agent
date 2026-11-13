@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environmentName": { "value": "${AZURE_ENV_NAME}" },
+    "location": { "value": "${AZURE_LOCATION=switzerlandnorth}" },
+    "principalId": { "value": "${AZURE_PRINCIPAL_ID}" },
+    "appExists": { "value": "${SERVICE_APP_RESOURCE_EXISTS=false}" },
+
+    "authMode": { "value": "${AUTH_MODE=mock}" },
+    "entraTenantId": { "value": "${ENTRA_TENANT_ID}" },
+    "entraApiAudience": { "value": "${ENTRA_API_AUDIENCE}" },
+    "entraSpaClientId": { "value": "${ENTRA_SPA_CLIENT_ID}" },
+    "allowedIpRanges": { "value": "${ALLOWED_IP_RANGES}" },
+
+    "storageProvider": { "value": "${STORAGE_PROVIDER=local}" },
+    "onedriveShareUrl": { "value": "${ONEDRIVE_SHARE_URL}" },
+    "onedriveClientId": { "value": "${ONEDRIVE_CLIENT_ID}" },
+    "storagePollMinutes": { "value": "${STORAGE_POLL_MINUTES=2}" },
+
+    "openAiLocation": { "value": "${AZURE_OPENAI_LOCATION}" },
+    "openAiModelName": { "value": "${AZURE_OPENAI_MODEL=gpt-4.1}" },
+    "openAiModelVersion": { "value": "${AZURE_OPENAI_MODEL_VERSION=2025-04-14}" },
+    "openAiSku": { "value": "${AZURE_OPENAI_SKU=Standard}" },
+    "openAiCapacity": { "value": "${AZURE_OPENAI_CAPACITY=50}" },
+    "openAiApiVersion": { "value": "${AZURE_OPENAI_API_VERSION=2024-10-21}" },
+    "aiRegionLabel": { "value": "${AI_REGION_LABEL}" },
+
+    "auditRetentionDays": { "value": "${AUDIT_RETENTION_DAYS=3650}" },
+    "keyVaultPurgeProtection": { "value": "${KEY_VAULT_PURGE_PROTECTION=false}" },
+    "dailyJobCron": { "value": "${DAILY_JOB_CRON=0 5 * * *}" },
+
+    "deployApim": { "value": "${DEPLOY_APIM=false}" },
+    "apimPublisherEmail": { "value": "${APIM_PUBLISHER_EMAIL}" }
+  }
+}

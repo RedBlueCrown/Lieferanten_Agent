@@ -1,0 +1,23 @@
+# Keep the build context small and free of local state and secrets.
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+**/*.log
+**/.DS_Store
+# Local data (PGlite database, local document store) from "npm run dev"
+data
+apps/api/data
+.git
+.gitignore
+.github
+.claude
+.hallmark
+.azure
+.vscode
+.idea
+coverage
+infra
+azure.yaml
+Dockerfile
+.dockerignore

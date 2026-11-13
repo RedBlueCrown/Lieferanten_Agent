@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+#
+# Azure Developer CLI: "azd up" provisions infra/main.bicep (Switzerland North)
+# and deploys the one container that serves the API and the web app.
+# Details: docs/azure-deployment.md
+
+name: vertragsmanagement
+
+infra:
+  provider: bicep
+  path: infra
+  module: main
+
+services:
+  app:
+    project: .
+    language: js
+    host: containerapp
+    docker:
+      path: Dockerfile
+      context: .
+      # Build in Azure Container Registry (Switzerland North); no local Docker
+      # needed. azd falls back to a local build if ACR Tasks are not allowed.
+      remoteBuild: true
+    hooks:
+      # Moves the daily Container Apps Job to the freshly deployed image.
+      postdeploy:
+        posix:
+          shell: sh
+          run: infra/hooks/postdeploy.sh
+          continueOnError: true
+        windows:
+          shell: pwsh
+          run: infra/hooks/postdeploy.ps1
+          continueOnError: true

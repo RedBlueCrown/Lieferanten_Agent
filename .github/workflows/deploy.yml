@@ -1,0 +1,72 @@
+name: Deploy to Azure
+
+# Manual only: Actions > "Deploy to Azure" > Run workflow.
+# Signs in with OpenID Connect (federated credential, no client secret).
+# Repository variables: AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_SUBSCRIPTION_ID,
+# AZURE_ENV_NAME, AZURE_LOCATION (switzerlandnorth). The optional app settings
+# below are read from repository variables as well; unset ones fall back to the
+# defaults in infra/main.parameters.json. See docs/azure-deployment.md.
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy-${{ vars.AZURE_ENV_NAME }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      AZURE_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+      AZURE_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+      AZURE_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      AZURE_ENV_NAME: ${{ vars.AZURE_ENV_NAME }}
+      AZURE_LOCATION: ${{ vars.AZURE_LOCATION }}
+      # App settings (optional repository variables)
+      AUTH_MODE: ${{ vars.AUTH_MODE }}
+      ENTRA_TENANT_ID: ${{ vars.ENTRA_TENANT_ID }}
+      ENTRA_API_AUDIENCE: ${{ vars.ENTRA_API_AUDIENCE }}
+      ENTRA_SPA_CLIENT_ID: ${{ vars.ENTRA_SPA_CLIENT_ID }}
+      ALLOWED_IP_RANGES: ${{ vars.ALLOWED_IP_RANGES }}
+      STORAGE_PROVIDER: ${{ vars.STORAGE_PROVIDER }}
+      ONEDRIVE_SHARE_URL: ${{ vars.ONEDRIVE_SHARE_URL }}
+      ONEDRIVE_CLIENT_ID: ${{ vars.ONEDRIVE_CLIENT_ID }}
+      AZURE_OPENAI_LOCATION: ${{ vars.AZURE_OPENAI_LOCATION }}
+      AZURE_OPENAI_MODEL: ${{ vars.AZURE_OPENAI_MODEL }}
+      AZURE_OPENAI_MODEL_VERSION: ${{ vars.AZURE_OPENAI_MODEL_VERSION }}
+      AZURE_OPENAI_SKU: ${{ vars.AZURE_OPENAI_SKU }}
+      AZURE_OPENAI_CAPACITY: ${{ vars.AZURE_OPENAI_CAPACITY }}
+      AUDIT_RETENTION_DAYS: ${{ vars.AUDIT_RETENTION_DAYS }}
+      KEY_VAULT_PURGE_PROTECTION: ${{ vars.KEY_VAULT_PURGE_PROTECTION }}
+      DEPLOY_APIM: ${{ vars.DEPLOY_APIM }}
+      APIM_PUBLISHER_EMAIL: ${{ vars.APIM_PUBLISHER_EMAIL }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install azd
+        uses: Azure/setup-azd@v2
+
+      # Azure CLI session, used by the postdeploy hook (infra/hooks).
+      - name: Azure login (OIDC)
+        uses: azure/login@v3
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+
+      - name: azd login (OIDC)
+        run: |
+          azd auth login \
+            --client-id "$AZURE_CLIENT_ID" \
+            --tenant-id "$AZURE_TENANT_ID" \
+            --federated-credential-provider github
+
+      - name: Provision infrastructure
+        run: azd provision --no-prompt
+
+      - name: Deploy app
+        run: azd deploy --no-prompt

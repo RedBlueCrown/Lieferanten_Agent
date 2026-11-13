@@ -1,0 +1,93 @@
+/* Hallmark · shape: app screen · theme: custom «Landesverwaltung» (brand: LLV blue kept, gold from the princely crown for the AI) · posture: restrained · genre: modern-minimal
+   critique: the deadline list is the signature object, read like a departure board; the agent stage shows the real document and the real line every value came from.
+   waive 64: tabular figures use the body face, mono only in the agent's console. */
+@import '@fontsource-variable/public-sans/wght.css';
+
+:root {
+  /* Paper and ink, tinted toward the LLV blue (hue 255). */
+  --color-paper: oklch(97.4% 0.005 250);
+  --color-paper-2: oklch(94.6% 0.008 250);
+  --color-paper-3: oklch(99.4% 0.003 250);
+  --color-ink: oklch(21% 0.025 258);
+  --color-ink-2: oklch(33% 0.022 258);
+  --color-muted: oklch(47% 0.018 258);
+  --color-faint: oklch(62% 0.014 258);
+  --color-rule: oklch(88% 0.009 250);
+  --color-rule-strong: oklch(80% 0.012 250);
+
+  /* LLV blue: actions, selection, links. */
+  --color-accent: oklch(47.5% 0.145 254);
+  --color-accent-hover: oklch(42% 0.14 254);
+  --color-accent-soft: oklch(94% 0.03 254);
+  --color-accent-ink: oklch(99.5% 0.003 250);
+  --color-focus: oklch(55% 0.19 254);
+
+  /* Gold: only for what the AI does. */
+  --color-gold: oklch(82% 0.15 84);
+  --color-gold-strong: oklch(70% 0.15 76);
+  --color-gold-soft: oklch(95% 0.045 88);
+
+  /* Status, always paired with a word and a shape. */
+  --color-red: oklch(52% 0.19 27);
+  --color-red-soft: oklch(95.5% 0.03 27);
+  --color-yellow: oklch(80% 0.15 85);
+  --color-yellow-ink: oklch(42% 0.09 70);
+  --color-yellow-soft: oklch(96.5% 0.05 92);
+  --color-green: oklch(52% 0.12 152);
+  --color-green-soft: oklch(95.5% 0.035 152);
+
+  /* The agent stage. */
+  --color-stage: oklch(18% 0.025 258);
+  --color-stage-2: oklch(23% 0.028 258);
+  --color-stage-rule: oklch(32% 0.025 258);
+  --color-stage-ink: oklch(95% 0.008 250);
+  --color-stage-muted: oklch(72% 0.018 255);
+
+  --font-body: 'Public Sans Variable', 'Public Sans', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, monospace;
+
+  /* Type scale 1.2 from 15px for an app screen; body text in content 16px. */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.4375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-figure: 2.625rem;
+
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+
+  --radius-control: 6px;
+  --radius-panel: 10px;
+  --radius-pill: 999px;
+
+  --shadow-float: 0 12px 32px -12px oklch(20% 0.03 258 / 0.28), 0 0 0 1px oklch(30% 0.02 258 / 0.08);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  --container: 1360px;
+  --nav-height: 64px;
+
+  color-scheme: light;
+}

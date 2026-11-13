@@ -1,0 +1,2944 @@
+{
+  "generatedFrom": "prototype/src/data.js",
+  "suppliers": [
+    {
+      "id": "L-1001",
+      "name": "Rheinwerk Informatik AG",
+      "city": "Vaduz",
+      "country": "FL",
+      "legalForm": "AG",
+      "class": "A",
+      "contact": {
+        "name": "Peter Ospelt",
+        "email": "p.ospelt@rheinwerk.li",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 231 01 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 791 41 11"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "eTax Natürliche Personen",
+          "level": "L4",
+          "operationsOwner": "M. Frick",
+          "business": "Steuerverwaltung, R. Kaiser",
+          "contact": "Peter Ospelt",
+          "note": ""
+        },
+        {
+          "name": "eTax Juristische Personen",
+          "level": "L3",
+          "operationsOwner": "M. Frick",
+          "business": "Steuerverwaltung, R. Kaiser",
+          "contact": "Peter Ospelt",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Top",
+          "begr": "Patches innert 48 h"
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "Top",
+          "begr": "LLV-Jira angebunden"
+        },
+        "eskalation": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "A (1-2 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": "86 MA (+4)"
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "Mangelhaft",
+          "begr": "Einziger Anbieter mit eTax-Know-how"
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "Mangelhaft",
+          "begr": "Keine dokumentierte Exit-Strategie"
+        }
+      },
+      "measures": "Hohe Abhängigkeit. Exit-Strategie bis Q2 2027 erarbeiten; Quellcode-Hinterlegung (Escrow) prüfen.",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 476700,
+          "negotiated": 467400,
+          "hourlyRate": 170,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 498200,
+          "negotiated": 476700,
+          "hourlyRate": 173,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2023,
+          "offered": 520200,
+          "negotiated": 486200,
+          "hourlyRate": 176,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 543100,
+          "negotiated": 496000,
+          "hourlyRate": 179,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 516000,
+          "negotiated": 505900,
+          "hourlyRate": 183,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2026,
+          "offered": 539200,
+          "negotiated": 516000,
+          "hourlyRate": 186,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2201",
+          "type": "Rahmenvertrag",
+          "title": "Rahmenvertrag Steuerapplikation eTax",
+          "start": "2022-04-01",
+          "end": "2027-03-31",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 420000,
+          "reviewDate": "2026-11-30",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Rheinwerk Informatik AG/RV_eTax_2022.pdf",
+          "note": "Preisverhandlung 2027 vorbereiten"
+        },
+        {
+          "id": "V-2202",
+          "type": "Wartung/Support (SLA)",
+          "title": "Wartung & Support eTax",
+          "start": "2022-04-01",
+          "end": "2027-03-31",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 96000,
+          "reviewDate": "2026-11-30",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Rheinwerk Informatik AG/SLA_eTax_2022.pdf",
+          "note": "Verfügbarkeit 99.7 %"
+        },
+        {
+          "id": "V-2203",
+          "type": "AVV",
+          "title": "Auftragsverarbeitung eTax",
+          "start": "2022-04-01",
+          "end": null,
+          "noticeMonths": 0,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 0,
+          "reviewDate": "2027-04-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Rheinwerk Informatik AG/AVV_eTax_2022.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1002",
+      "name": "Alpina Cloud Services GmbH",
+      "city": "Zürich",
+      "country": "CH",
+      "legalForm": "GmbH",
+      "class": "A",
+      "contact": {
+        "name": "Sandra Keller",
+        "email": "s.keller@alpina-cloud.ch",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 232 02 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 792 42 12"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Bürgerportal",
+          "level": "L3",
+          "operationsOwner": "S. Hasler",
+          "business": "Amt für Informatik, A. Wohlwend",
+          "contact": "Sandra Keller",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "Mangelhaft",
+          "begr": "Änderungen dauern > 6 Wochen"
+        },
+        "qualitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "Mangelhaft",
+          "begr": "+7 % 2026"
+        },
+        "zusatzkosten": {
+          "wert": "Mangelhaft",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "Mangelhaft",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "A (1-2 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "GmbH"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "Kein AVV vorhanden – umgehend nachfordern. Kündigungsfrist vor Auto-Verlängerung verpasst; Verhandlung Sonderkündigung.",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 165100,
+          "negotiated": 158000,
+          "hourlyRate": 180,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2022,
+          "offered": 174500,
+          "negotiated": 163100,
+          "hourlyRate": 183,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 184300,
+          "negotiated": 168300,
+          "hourlyRate": 187,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 177200,
+          "negotiated": 173700,
+          "hourlyRate": 190,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2025,
+          "offered": 187400,
+          "negotiated": 179300,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 198000,
+          "negotiated": 185000,
+          "hourlyRate": 197,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2210",
+          "type": "SaaS-Vertrag",
+          "title": "Hosting Bürgerportal",
+          "start": "2024-01-01",
+          "end": "2026-12-31",
+          "noticeMonths": 3,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 36,
+          "annualValue": 185000,
+          "reviewDate": "2026-10-15",
+          "law": "CH",
+          "venue": "Zürich",
+          "status": "aktiv",
+          "documentPath": "Verträge/Alpina Cloud Services GmbH/SaaS_Buergerportal_2024.pdf",
+          "note": "Auto-Verlängerung 36 Monate"
+        }
+      ]
+    },
+    {
+      "id": "L-1003",
+      "name": "Taxis Solutions AG",
+      "city": "Schaan",
+      "country": "FL",
+      "legalForm": "AG",
+      "class": "A",
+      "contact": {
+        "name": "Marco Vogt",
+        "email": "m.vogt@taxis.li",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 233 03 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 793 43 13"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Fahrzeugregister",
+          "level": "L4",
+          "operationsOwner": "T. Marxer",
+          "business": "Motorfahrzeugkontrolle, C. Beck",
+          "contact": "Marco Vogt",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "Mangelhaft",
+          "begr": "Betriebshandbuch veraltet"
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "A (1-2 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "Mangelhaft",
+          "begr": "14 MA (−3)"
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "Mangelhaft",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "Mangelhaft",
+          "begr": "Inhaber 64, keine Regelung"
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "Nachfolgeregelung beim nächsten Jahresgespräch thematisieren.",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 113800,
+          "negotiated": 106400,
+          "hourlyRate": 190,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 121700,
+          "negotiated": 111100,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 118300,
+          "negotiated": 116000,
+          "hourlyRate": 197,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2024,
+          "offered": 126500,
+          "negotiated": 121100,
+          "hourlyRate": 200,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 135200,
+          "negotiated": 126400,
+          "hourlyRate": 204,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 144500,
+          "negotiated": 132000,
+          "hourlyRate": 208,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2220",
+          "type": "Wartung/Support (SLA)",
+          "title": "Betrieb Fahrzeugregister",
+          "start": "2021-07-01",
+          "end": "2027-06-30",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 132000,
+          "reviewDate": "2027-01-15",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Taxis Solutions AG/SLA_Fahrzeugregister.pdf",
+          "note": ""
+        },
+        {
+          "id": "V-2221",
+          "type": "AVV",
+          "title": "Auftragsverarbeitung Fahrzeugregister",
+          "start": "2021-07-01",
+          "end": null,
+          "noticeMonths": 0,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 0,
+          "reviewDate": "2026-12-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Taxis Solutions AG/AVV_Fahrzeugregister.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1004",
+      "name": "Gamprin Netzwerk AG",
+      "city": "Gamprin",
+      "country": "FL",
+      "legalForm": "AG",
+      "class": "A",
+      "contact": {
+        "name": "Lukas Hoop",
+        "email": "l.hoop@gamprin-netz.li",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 234 04 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 794 44 14"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "LAN/WLAN Landesverwaltung",
+          "level": "L3",
+          "operationsOwner": "M. Frick",
+          "business": "Amt für Informatik, M. Frick",
+          "contact": "Lukas Hoop",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "A (1-2 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 323600,
+          "negotiated": 295500,
+          "hourlyRate": 140,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 318200,
+          "negotiated": 312000,
+          "hourlyRate": 143,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2023,
+          "offered": 344300,
+          "negotiated": 329500,
+          "hourlyRate": 145,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 372300,
+          "negotiated": 347900,
+          "hourlyRate": 148,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 402300,
+          "negotiated": 367400,
+          "hourlyRate": 150,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2026,
+          "offered": 395800,
+          "negotiated": 388000,
+          "hourlyRate": 153,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2230",
+          "type": "Rahmenvertrag",
+          "title": "Rahmenvertrag Netzwerk & Infrastruktur",
+          "start": "2023-01-01",
+          "end": "2027-12-31",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 310000,
+          "reviewDate": "2027-03-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Gamprin Netzwerk AG/RV_Netzwerk_2023.pdf",
+          "note": ""
+        },
+        {
+          "id": "V-2231",
+          "type": "Einzelvertrag",
+          "title": "Erneuerung WLAN Regierungsgebäude",
+          "start": "2026-03-01",
+          "end": "2026-12-15",
+          "noticeMonths": 1,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 78000,
+          "reviewDate": null,
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": null,
+          "note": "Abnahme geplant Dezember"
+        }
+      ]
+    },
+    {
+      "id": "L-1005",
+      "name": "Medicus Soft AG",
+      "city": "St. Gallen",
+      "country": "CH",
+      "legalForm": "AG",
+      "class": "B",
+      "contact": {
+        "name": "Andrea Baumann",
+        "email": "a.baumann@medicus-soft.ch",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 235 05 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 795 45 15"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Fallführung ÄD",
+          "level": "L2",
+          "operationsOwner": "S. Hasler",
+          "business": "Amt für Gesundheit, N. Schädler",
+          "contact": "Andrea Baumann",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "B (1 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 39700,
+          "negotiated": 38900,
+          "hourlyRate": 150,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2022,
+          "offered": 43400,
+          "negotiated": 41500,
+          "hourlyRate": 153,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 47400,
+          "negotiated": 44300,
+          "hourlyRate": 155,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 51800,
+          "negotiated": 47300,
+          "hourlyRate": 158,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2025,
+          "offered": 51600,
+          "negotiated": 50600,
+          "hourlyRate": 161,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 56400,
+          "negotiated": 54000,
+          "hourlyRate": 164,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2240",
+          "type": "SaaS-Vertrag",
+          "title": "Fallführung Amtsärztlicher Dienst",
+          "start": "2025-02-01",
+          "end": "2027-01-31",
+          "noticeMonths": 3,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 54000,
+          "reviewDate": "2026-12-10",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Medicus Soft AG/SaaS_Fallfuehrung.pdf",
+          "note": ""
+        },
+        {
+          "id": "V-2241",
+          "type": "AVV",
+          "title": "AVV Gesundheitsdaten",
+          "start": "2025-02-01",
+          "end": null,
+          "noticeMonths": 0,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 0,
+          "reviewDate": "2027-02-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Medicus Soft AG/AVV_2025.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1006",
+      "name": "Sigma Geodaten AG",
+      "city": "Chur",
+      "country": "CH",
+      "legalForm": "AG",
+      "class": "B",
+      "contact": {
+        "name": "Reto Casutt",
+        "email": "r.casutt@sigma-geo.ch",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 236 06 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 796 46 16"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Geoportal",
+          "level": "L2",
+          "operationsOwner": "T. Marxer",
+          "business": "Amt für Tiefbau und Geoinformation, C. Beck",
+          "contact": "Reto Casutt",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Mangelhaft",
+          "begr": "Mehrere Regressionsfehler 2026"
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "Mangelhaft",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "Mangelhaft",
+          "begr": "Kein Eskalationspfad definiert"
+        },
+        "meetings": {
+          "wert": "B (1 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "Qualitätsgespräch terminieren; Eskalationspfad vertraglich ergänzen.",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 38800,
+          "negotiated": 37100,
+          "hourlyRate": 160,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 40600,
+          "negotiated": 37900,
+          "hourlyRate": 163,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 42300,
+          "negotiated": 38600,
+          "hourlyRate": 166,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2024,
+          "offered": 40200,
+          "negotiated": 39400,
+          "hourlyRate": 169,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 42000,
+          "negotiated": 40200,
+          "hourlyRate": 172,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 43900,
+          "negotiated": 41000,
+          "hourlyRate": 175,
+          "note": "Neuverhandlung Rahmenvertrag"
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2250",
+          "type": "Wartung/Support (SLA)",
+          "title": "Wartung Geoportal",
+          "start": "2020-01-01",
+          "end": "2026-12-31",
+          "noticeMonths": 3,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 41000,
+          "reviewDate": "2026-09-30",
+          "law": "CH",
+          "venue": "Chur",
+          "status": "aktiv",
+          "documentPath": "Verträge/Sigma Geodaten AG/Wartung_Geoportal.pdf",
+          "note": "Review überfällig"
+        }
+      ]
+    },
+    {
+      "id": "L-1007",
+      "name": "Nordlicht Software GmbH",
+      "city": "München",
+      "country": "DE",
+      "legalForm": "GmbH",
+      "class": "B",
+      "contact": {
+        "name": "Jonas Weber",
+        "email": "j.weber@nordlicht-software.de",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 237 07 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 797 47 17"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Zeiterfassung LLV",
+          "level": "L2",
+          "operationsOwner": null,
+          "business": "Amt für Personal, I. Büchel",
+          "contact": "Jonas Weber",
+          "note": "Betriebsverantwortung offen"
+        }
+      ],
+      "kpi": {},
+      "risk": {},
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 61200,
+          "negotiated": 57200,
+          "hourlyRate": 170,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 64700,
+          "negotiated": 59100,
+          "hourlyRate": 173,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2023,
+          "offered": 62200,
+          "negotiated": 61000,
+          "hourlyRate": 176,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 65700,
+          "negotiated": 62900,
+          "hourlyRate": 179,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 69400,
+          "negotiated": 64900,
+          "hourlyRate": 183,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2026,
+          "offered": 73400,
+          "negotiated": 67000,
+          "hourlyRate": 186,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2260",
+          "type": "SaaS-Vertrag",
+          "title": "Personalzeiterfassung",
+          "start": "2025-07-01",
+          "end": "2028-06-30",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 67000,
+          "reviewDate": "2027-06-01",
+          "law": "DE",
+          "venue": "München",
+          "status": "aktiv",
+          "documentPath": "Verträge/Nordlicht Software GmbH/SaaS_Zeiterfassung.pdf",
+          "note": "Deutsches Recht akzeptiert (Ausnahme)"
+        }
+      ]
+    },
+    {
+      "id": "L-1008",
+      "name": "Kronos HR Systeme GmbH",
+      "city": "Wien",
+      "country": "AT",
+      "legalForm": "GmbH",
+      "class": "B",
+      "contact": {
+        "name": "Eva Gruber",
+        "email": "e.gruber@kronos-hr.at",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 238 08 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 798 48 18"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Lohnbuchhaltung",
+          "level": "L3",
+          "operationsOwner": "M. Frick",
+          "business": "Amt für Personal, I. Büchel",
+          "contact": "Eva Gruber",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "B (1 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "GmbH"
+        },
+        "finanzen": {
+          "wert": "Mangelhaft",
+          "begr": "Verlust 2025"
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "Mangelhaft",
+          "begr": "Kundenrückgang −12 %"
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "Finanzielle Lage beobachten; Marktabklärung Alternativen.",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 51200,
+          "negotiated": 46800,
+          "hourlyRate": 180,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2022,
+          "offered": 49800,
+          "negotiated": 48800,
+          "hourlyRate": 183,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 53300,
+          "negotiated": 51000,
+          "hourlyRate": 187,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 56900,
+          "negotiated": 53200,
+          "hourlyRate": 190,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2025,
+          "offered": 60900,
+          "negotiated": 55600,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 59200,
+          "negotiated": 58000,
+          "hourlyRate": 197,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2270",
+          "type": "Wartung/Support (SLA)",
+          "title": "Wartung Lohnsoftware",
+          "start": "2019-01-01",
+          "end": "2027-02-28",
+          "noticeMonths": 3,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 58000,
+          "reviewDate": "2026-12-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Kronos HR Systeme GmbH/Wartung_Lohn.pdf",
+          "note": "Ablösung geprüft"
+        }
+      ]
+    },
+    {
+      "id": "L-1009",
+      "name": "Lumen Analytics AG",
+      "city": "Balzers",
+      "country": "FL",
+      "legalForm": "AG",
+      "class": "B",
+      "contact": {
+        "name": "Nina Wolfinger",
+        "email": "n.wolfinger@lumen.li",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 239 09 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 799 49 19"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Statistikportal",
+          "level": "L2",
+          "operationsOwner": "S. Hasler",
+          "business": "Amt für Statistik, N. Schädler",
+          "contact": "Nina Wolfinger",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "B (1 x jährlich)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 38000,
+          "negotiated": 37300,
+          "hourlyRate": 190,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 41200,
+          "negotiated": 39400,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 44500,
+          "negotiated": 41600,
+          "hourlyRate": 197,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2024,
+          "offered": 48100,
+          "negotiated": 43900,
+          "hourlyRate": 200,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 47300,
+          "negotiated": 46400,
+          "hourlyRate": 204,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 51200,
+          "negotiated": 49000,
+          "hourlyRate": 208,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2280",
+          "type": "SaaS-Vertrag",
+          "title": "BI-Plattform Statistik",
+          "start": "2026-01-01",
+          "end": "2028-12-31",
+          "noticeMonths": 6,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 12,
+          "annualValue": 49000,
+          "reviewDate": "2027-09-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Lumen Analytics AG/SaaS_BI.pdf",
+          "note": ""
+        },
+        {
+          "id": "V-2281",
+          "type": "AVV",
+          "title": "AVV Statistikdaten",
+          "start": "2026-01-01",
+          "end": null,
+          "noticeMonths": 0,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 0,
+          "reviewDate": "2027-09-01",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Lumen Analytics AG/AVV_2026.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1010",
+      "name": "Novalis Consulting GmbH",
+      "city": "Feldkirch",
+      "country": "AT",
+      "legalForm": "GmbH",
+      "class": "C",
+      "contact": {
+        "name": "Thomas Moser",
+        "email": "t.moser@novalis.at",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 2310 010 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 7910 410 110"
+          }
+        ]
+      },
+      "apps": [],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "Mangelhaft",
+          "begr": "Über LLV-Ansätzen"
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "C (bei Bedarf)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "GmbH"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [],
+      "contracts": [
+        {
+          "id": "V-2290",
+          "type": "NDA",
+          "title": "Geheimhaltung Strategieprojekt",
+          "start": "2026-08-01",
+          "end": "2029-07-31",
+          "noticeMonths": 0,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 0,
+          "reviewDate": null,
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Novalis Consulting GmbH/NDA_2026.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1011",
+      "name": "Helvetia Scan & Print AG",
+      "city": "Buchs SG",
+      "country": "CH",
+      "legalForm": "AG",
+      "class": "C",
+      "contact": {
+        "name": "Beat Schlegel",
+        "email": "b.schlegel@hsp.ch",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 2311 011 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 7911 411 111"
+          }
+        ]
+      },
+      "apps": [
+        {
+          "name": "Scanstrasse Archiv",
+          "level": "L1",
+          "operationsOwner": "T. Marxer",
+          "business": "Landesarchiv, A. Wohlwend",
+          "contact": "Beat Schlegel",
+          "note": ""
+        }
+      ],
+      "kpi": {
+        "liefertermine": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "C (bei Bedarf)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "OK",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 32600,
+          "negotiated": 31200,
+          "hourlyRate": 180,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        },
+        {
+          "year": 2022,
+          "offered": 34500,
+          "negotiated": 32200,
+          "hourlyRate": 183,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 36400,
+          "negotiated": 33200,
+          "hourlyRate": 187,
+          "note": ""
+        },
+        {
+          "year": 2024,
+          "offered": 35000,
+          "negotiated": 34300,
+          "hourlyRate": 190,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2025,
+          "offered": 37000,
+          "negotiated": 35400,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 39100,
+          "negotiated": 36500,
+          "hourlyRate": 197,
+          "note": ""
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2300",
+          "type": "Einzelvertrag",
+          "title": "Digitalisierung Archivbestände 2026",
+          "start": "2026-02-01",
+          "end": "2027-01-31",
+          "noticeMonths": 1,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 36500,
+          "reviewDate": "2026-12-20",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Helvetia Scan & Print AG/EV_Archiv_2026.pdf",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "L-1012",
+      "name": "Brücke Datenschutzpartner AG",
+      "city": "Eschen",
+      "country": "FL",
+      "legalForm": "AG",
+      "class": "C",
+      "contact": {
+        "name": "Lea Meier",
+        "email": "l.meier@bruecke-ds.li",
+        "phones": [
+          {
+            "art": "Zentrale",
+            "nr": "+423 2312 012 00"
+          },
+          {
+            "art": "Direkt",
+            "nr": "+423 7912 412 112"
+          }
+        ]
+      },
+      "apps": [],
+      "kpi": {
+        "liefertermine": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "agilitaet": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "qualitaet": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "preise": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "zusatzkosten": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "stundensaetze": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "erreichbarkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "fachkunde": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "doku": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "proaktiv": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "ticketing": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "eskalation": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "meetings": {
+          "wert": "C (bei Bedarf)",
+          "begr": ""
+        }
+      },
+      "risk": {
+        "rechtsform": {
+          "wert": "OK",
+          "begr": "AG"
+        },
+        "finanzen": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "mitarbeiter": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "kunden": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "strategie": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "reifegrad": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        },
+        "abhaengigkeit": {
+          "wert": "Top",
+          "begr": ""
+        },
+        "nachfolge": {
+          "wert": "OK",
+          "begr": ""
+        },
+        "exit": {
+          "wert": "Nicht relevant",
+          "begr": ""
+        }
+      },
+      "measures": "",
+      "priceHistory": [
+        {
+          "year": 2021,
+          "offered": 20800,
+          "negotiated": 19400,
+          "hourlyRate": 190,
+          "note": ""
+        },
+        {
+          "year": 2022,
+          "offered": 22100,
+          "negotiated": 20200,
+          "hourlyRate": 193,
+          "note": ""
+        },
+        {
+          "year": 2023,
+          "offered": 21500,
+          "negotiated": 21100,
+          "hourlyRate": 197,
+          "note": "Neuverhandlung Rahmenvertrag"
+        },
+        {
+          "year": 2024,
+          "offered": 23000,
+          "negotiated": 22000,
+          "hourlyRate": 200,
+          "note": ""
+        },
+        {
+          "year": 2025,
+          "offered": 24600,
+          "negotiated": 23000,
+          "hourlyRate": 204,
+          "note": ""
+        },
+        {
+          "year": 2026,
+          "offered": 26300,
+          "negotiated": 24000,
+          "hourlyRate": 208,
+          "note": "Mehrjahresbindung gegen Rabatt"
+        }
+      ],
+      "contracts": [
+        {
+          "id": "V-2310",
+          "type": "Beratung/Dienstleistung",
+          "title": "Datenschutzberatung DSFA",
+          "start": "2026-01-01",
+          "end": "2026-12-31",
+          "noticeMonths": 1,
+          "noticeMode": "laufzeitende",
+          "renewalMonths": 0,
+          "annualValue": 24000,
+          "reviewDate": "2026-11-20",
+          "law": "FL",
+          "venue": "Vaduz",
+          "status": "aktiv",
+          "documentPath": "Verträge/Brücke Datenschutzpartner AG/Beratung_2026.pdf",
+          "note": "Verlängerung 2027 geplant"
+        }
+      ]
+    }
+  ],
+  "standards": [
+    {
+      "contractType": "Rahmenvertrag",
+      "version": "2.3",
+      "date": "12.09.2026",
+      "criteria": [
+        {
+          "title": "Rangfolge der Vertragsbestandteile",
+          "gruen": "LLV-Vertrag geht Anhängen vor; AGB des Lieferanten sind ausgeschlossen.",
+          "gelb": "AGB des Lieferanten gelten nachrangig, soweit sie dem Vertrag nicht widersprechen.",
+          "rot": "AGB des Lieferanten gehen dem Vertrag vor oder werden ohne Prüfung integriert.",
+          "muster": "Es gelten in nachstehender Rangfolge: (1) dieser Vertrag, (2) seine Anhänge, (3) das Angebot des Lieferanten. Allgemeine Geschäftsbedingungen des Lieferanten finden keine Anwendung."
+        },
+        {
+          "title": "Abrufverfahren",
+          "gruen": "Leistungen werden per Einzelvertrag oder Bestellung abgerufen; kein Mindestabnahmevolumen.",
+          "gelb": "Unverbindliches Zielvolumen ohne finanzielle Folgen.",
+          "rot": "Verbindliche Mindestabnahme oder Ausgleichszahlung bei Unterschreitung.",
+          "muster": "Die LLV ruft Leistungen bei Bedarf mittels Einzelvertrag ab. Eine Abnahmepflicht besteht nicht."
+        },
+        {
+          "title": "Laufzeit und Verlängerung",
+          "gruen": "Feste Laufzeit von höchstens 3 Jahren; stillschweigende Verlängerung um höchstens 12 Monate.",
+          "gelb": "Automatische Verlängerung um 13 bis 24 Monate, sofern die Kündigungsfrist höchstens 6 Monate beträgt.",
+          "rot": "Automatische Verlängerung um mehr als 24 Monate oder Mindestlaufzeit über 5 Jahre ohne Ausstiegsmöglichkeit.",
+          "muster": "Der Vertrag tritt mit Unterzeichnung in Kraft und gilt für eine feste Dauer von [Laufzeit]. Danach verlängert er sich jeweils um 12 Monate, sofern er nicht fristgerecht gekündigt wird."
+        },
+        {
+          "title": "Kündigung",
+          "gruen": "Ordentliche Kündigung durch die LLV mit höchstens 6 Monaten Frist auf Monatsende; ausserordentliche Kündigung aus wichtigem Grund jederzeit.",
+          "gelb": "Kündigungsfrist 6 bis 12 Monate oder Kündigung nur auf Jahresende.",
+          "rot": "Kündigungsfrist über 12 Monate, kein ausserordentliches Kündigungsrecht oder einseitiges Kündigungsrecht nur des Lieferanten.",
+          "muster": "Jede Partei kann den Vertrag unter Einhaltung einer Frist von [Frist] Monaten auf das Ende eines Monats schriftlich kündigen. Das Recht zur Kündigung aus wichtigem Grund bleibt vorbehalten."
+        },
+        {
+          "title": "Vergütung und Preisanpassung",
+          "gruen": "Fixpreise; Anpassung höchstens einmal jährlich, gekoppelt an den Landesindex der Konsumentenpreise, maximal 3 %, mit 3 Monaten Ankündigung.",
+          "gelb": "Anpassung bis 5 % pro Jahr mit Ankündigung.",
+          "rot": "Einseitige Preisanpassung ohne Obergrenze oder ohne Sonderkündigungsrecht der LLV.",
+          "muster": "Die Vergütung beträgt [Betrag] exkl. MWST. Eine Anpassung ist frühestens nach 12 Monaten, höchstens einmal jährlich und maximal im Umfang der Veränderung des Landesindex der Konsumentenpreise, höchstens jedoch 3 %, zulässig."
+        },
+        {
+          "title": "Haftung",
+          "gruen": "Haftung mindestens in Höhe des Jahresvertragswerts; unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Personenschäden.",
+          "gelb": "Begrenzung auf 50–100 % des Jahresvertragswerts.",
+          "rot": "Begrenzung unter 50 % des Jahresvertragswerts, Ausschluss bei grober Fahrlässigkeit oder Ausschluss der Haftung für Datenverlust.",
+          "muster": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt."
+        },
+        {
+          "title": "Geheimhaltung und Amtsgeheimnis",
+          "gruen": "Umfassende Geheimhaltungspflicht inkl. Hinweis auf das Amtsgeheimnis; gilt unbefristet über das Vertragsende hinaus.",
+          "gelb": "Geheimhaltung befristet auf mindestens 5 Jahre nach Vertragsende.",
+          "rot": "Keine Geheimhaltungsklausel oder Dauer unter 5 Jahren.",
+          "muster": "Der Lieferant verpflichtet sich, sämtliche Informationen, die ihm im Rahmen dieses Vertrags bekannt werden, vertraulich zu behandeln. Er nimmt zur Kenntnis, dass diese dem Amtsgeheimnis unterliegen können. Die Pflicht gilt über das Vertragsende hinaus."
+        },
+        {
+          "title": "Datenschutz und Datenstandort",
+          "gruen": "Verarbeitung gemäss DSGVO (EWR) und liechtensteinischem DSG; AVV abgeschlossen; Datenhaltung in FL, CH oder EWR.",
+          "gelb": "Datenhaltung ausserhalb des EWR mit Angemessenheitsbeschluss und Standardvertragsklauseln.",
+          "rot": "Datenhaltung in Drittstaaten ohne Garantien oder Nutzung von LLV-Daten für eigene Zwecke (z. B. KI-Training).",
+          "muster": "Der Lieferant verarbeitet Personendaten ausschliesslich im Auftrag der LLV und nach Massgabe der Auftragsverarbeitungsvereinbarung. Die Daten werden ausschliesslich in Rechenzentren in Liechtenstein, der Schweiz oder im EWR gespeichert."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "Einzelvertrag",
+      "version": "1.8",
+      "date": "04.05.2026",
+      "criteria": [
+        {
+          "title": "Rangfolge der Vertragsbestandteile",
+          "gruen": "LLV-Vertrag geht Anhängen vor; AGB des Lieferanten sind ausgeschlossen.",
+          "gelb": "AGB des Lieferanten gelten nachrangig, soweit sie dem Vertrag nicht widersprechen.",
+          "rot": "AGB des Lieferanten gehen dem Vertrag vor oder werden ohne Prüfung integriert.",
+          "muster": "Es gelten in nachstehender Rangfolge: (1) dieser Vertrag, (2) seine Anhänge, (3) das Angebot des Lieferanten. Allgemeine Geschäftsbedingungen des Lieferanten finden keine Anwendung."
+        },
+        {
+          "title": "Laufzeit und Verlängerung",
+          "gruen": "Feste Laufzeit von höchstens 3 Jahren; stillschweigende Verlängerung um höchstens 12 Monate.",
+          "gelb": "Automatische Verlängerung um 13 bis 24 Monate, sofern die Kündigungsfrist höchstens 6 Monate beträgt.",
+          "rot": "Automatische Verlängerung um mehr als 24 Monate oder Mindestlaufzeit über 5 Jahre ohne Ausstiegsmöglichkeit.",
+          "muster": "Der Vertrag tritt mit Unterzeichnung in Kraft und gilt für eine feste Dauer von [Laufzeit]. Danach verlängert er sich jeweils um 12 Monate, sofern er nicht fristgerecht gekündigt wird."
+        },
+        {
+          "title": "Vergütung und Preisanpassung",
+          "gruen": "Fixpreise; Anpassung höchstens einmal jährlich, gekoppelt an den Landesindex der Konsumentenpreise, maximal 3 %, mit 3 Monaten Ankündigung.",
+          "gelb": "Anpassung bis 5 % pro Jahr mit Ankündigung.",
+          "rot": "Einseitige Preisanpassung ohne Obergrenze oder ohne Sonderkündigungsrecht der LLV.",
+          "muster": "Die Vergütung beträgt [Betrag] exkl. MWST. Eine Anpassung ist frühestens nach 12 Monaten, höchstens einmal jährlich und maximal im Umfang der Veränderung des Landesindex der Konsumentenpreise, höchstens jedoch 3 %, zulässig."
+        },
+        {
+          "title": "Abnahme und Gewährleistung",
+          "gruen": "Schriftliche Abnahme durch die LLV; Gewährleistung 12 Monate ab Abnahme.",
+          "gelb": "Gewährleistung 6 Monate.",
+          "rot": "Abnahmefiktion nach weniger als 10 Arbeitstagen oder Ausschluss der Gewährleistung.",
+          "muster": "Die Leistungen gelten erst mit schriftlicher Abnahme durch die LLV als erbracht. Die Gewährleistungsfrist beträgt 12 Monate ab Abnahme."
+        },
+        {
+          "title": "Haftung",
+          "gruen": "Haftung mindestens in Höhe des Jahresvertragswerts; unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Personenschäden.",
+          "gelb": "Begrenzung auf 50–100 % des Jahresvertragswerts.",
+          "rot": "Begrenzung unter 50 % des Jahresvertragswerts, Ausschluss bei grober Fahrlässigkeit oder Ausschluss der Haftung für Datenverlust.",
+          "muster": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt."
+        },
+        {
+          "title": "Nutzungs- und Schutzrechte",
+          "gruen": "Rechte an Individualentwicklungen gehen an die LLV über; an Standardsoftware unbefristetes, nicht-exklusives Nutzungsrecht.",
+          "gelb": "Bei SaaS Nutzungsrecht auf Vertragsdauer; Arbeitsergebnisse mit einfachem Nutzungsrecht.",
+          "rot": "Rechte an LLV-Daten oder an Arbeitsergebnissen verbleiben ausschliesslich beim Lieferanten.",
+          "muster": "Sämtliche Rechte an Arbeitsergebnissen, die eigens für die LLV erstellt werden, gehen mit ihrer Entstehung auf die LLV über. Die Daten der LLV bleiben in deren Eigentum."
+        },
+        {
+          "title": "Geheimhaltung und Amtsgeheimnis",
+          "gruen": "Umfassende Geheimhaltungspflicht inkl. Hinweis auf das Amtsgeheimnis; gilt unbefristet über das Vertragsende hinaus.",
+          "gelb": "Geheimhaltung befristet auf mindestens 5 Jahre nach Vertragsende.",
+          "rot": "Keine Geheimhaltungsklausel oder Dauer unter 5 Jahren.",
+          "muster": "Der Lieferant verpflichtet sich, sämtliche Informationen, die ihm im Rahmen dieses Vertrags bekannt werden, vertraulich zu behandeln. Er nimmt zur Kenntnis, dass diese dem Amtsgeheimnis unterliegen können. Die Pflicht gilt über das Vertragsende hinaus."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "AVV",
+      "version": "3.1",
+      "date": "02.10.2026",
+      "criteria": [
+        {
+          "title": "Datenschutz und Datenstandort",
+          "gruen": "Verarbeitung gemäss DSGVO (EWR) und liechtensteinischem DSG; AVV abgeschlossen; Datenhaltung in FL, CH oder EWR.",
+          "gelb": "Datenhaltung ausserhalb des EWR mit Angemessenheitsbeschluss und Standardvertragsklauseln.",
+          "rot": "Datenhaltung in Drittstaaten ohne Garantien oder Nutzung von LLV-Daten für eigene Zwecke (z. B. KI-Training).",
+          "muster": "Der Lieferant verarbeitet Personendaten ausschliesslich im Auftrag der LLV und nach Massgabe der Auftragsverarbeitungsvereinbarung. Die Daten werden ausschliesslich in Rechenzentren in Liechtenstein, der Schweiz oder im EWR gespeichert."
+        },
+        {
+          "title": "Beizug von Subunternehmern",
+          "gruen": "Nur mit vorgängiger schriftlicher Zustimmung der LLV; Liste im Anhang.",
+          "gelb": "Informationspflicht mit Widerspruchsrecht der LLV innert 30 Tagen.",
+          "rot": "Freier Beizug ohne Information der LLV.",
+          "muster": "Der Beizug von Subunternehmern bedarf der vorgängigen schriftlichen Zustimmung der LLV. Die genehmigten Subunternehmer sind in Anhang 2 aufgeführt."
+        },
+        {
+          "title": "Technische und organisatorische Massnahmen",
+          "gruen": "TOM im Anhang beschrieben; Zertifizierung (z. B. ISO 27001) mit jährlichem Nachweis.",
+          "gelb": "TOM allgemein beschrieben, Nachweis auf Anfrage.",
+          "rot": "Keine TOM beschrieben.",
+          "muster": "Der Auftragsverarbeiter trifft die in Anhang 1 beschriebenen technischen und organisatorischen Massnahmen und weist deren Wirksamkeit jährlich nach."
+        },
+        {
+          "title": "Meldung von Datenschutzverletzungen",
+          "gruen": "Unverzüglich, spätestens innert 24 Stunden.",
+          "gelb": "Innert 48 Stunden.",
+          "rot": "Später als 72 Stunden oder keine Meldepflicht.",
+          "muster": "Der Auftragsverarbeiter meldet der LLV Verletzungen des Schutzes personenbezogener Daten unverzüglich, spätestens innert 24 Stunden nach Kenntnisnahme."
+        },
+        {
+          "title": "Kontroll- und Auditrechte",
+          "gruen": "Audit durch die LLV oder beauftragte Dritte nach Ankündigung.",
+          "gelb": "Nur Vorlage aktueller Zertifikate und Prüfberichte.",
+          "rot": "Kontrollrechte ausgeschlossen.",
+          "muster": "Die LLV ist berechtigt, die Einhaltung dieser Vereinbarung nach vorgängiger Ankündigung selbst oder durch beauftragte Dritte zu überprüfen."
+        },
+        {
+          "title": "Exit und Datenrückgabe",
+          "gruen": "Rückgabe aller Daten in einem Standardformat innert 30 Tagen, Migrationsunterstützung zu vertraglichen Ansätzen, Löschbestätigung.",
+          "gelb": "Rückgabe innert 90 Tagen oder kostenpflichtig nach Aufwand.",
+          "rot": "Keine Rückgabepflicht oder nur in proprietärem Format.",
+          "muster": "Bei Vertragsende übergibt der Lieferant der LLV sämtliche Daten innert 30 Tagen in einem gängigen, maschinenlesbaren Format und bestätigt anschliessend schriftlich deren Löschung."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "SaaS-Vertrag",
+      "version": "2.0",
+      "date": "21.08.2026",
+      "criteria": [
+        {
+          "title": "Rangfolge der Vertragsbestandteile",
+          "gruen": "LLV-Vertrag geht Anhängen vor; AGB des Lieferanten sind ausgeschlossen.",
+          "gelb": "AGB des Lieferanten gelten nachrangig, soweit sie dem Vertrag nicht widersprechen.",
+          "rot": "AGB des Lieferanten gehen dem Vertrag vor oder werden ohne Prüfung integriert.",
+          "muster": "Es gelten in nachstehender Rangfolge: (1) dieser Vertrag, (2) seine Anhänge, (3) das Angebot des Lieferanten. Allgemeine Geschäftsbedingungen des Lieferanten finden keine Anwendung."
+        },
+        {
+          "title": "Laufzeit und Verlängerung",
+          "gruen": "Feste Laufzeit von höchstens 3 Jahren; stillschweigende Verlängerung um höchstens 12 Monate.",
+          "gelb": "Automatische Verlängerung um 13 bis 24 Monate, sofern die Kündigungsfrist höchstens 6 Monate beträgt.",
+          "rot": "Automatische Verlängerung um mehr als 24 Monate oder Mindestlaufzeit über 5 Jahre ohne Ausstiegsmöglichkeit.",
+          "muster": "Der Vertrag tritt mit Unterzeichnung in Kraft und gilt für eine feste Dauer von [Laufzeit]. Danach verlängert er sich jeweils um 12 Monate, sofern er nicht fristgerecht gekündigt wird."
+        },
+        {
+          "title": "Kündigung",
+          "gruen": "Ordentliche Kündigung durch die LLV mit höchstens 6 Monaten Frist auf Monatsende; ausserordentliche Kündigung aus wichtigem Grund jederzeit.",
+          "gelb": "Kündigungsfrist 6 bis 12 Monate oder Kündigung nur auf Jahresende.",
+          "rot": "Kündigungsfrist über 12 Monate, kein ausserordentliches Kündigungsrecht oder einseitiges Kündigungsrecht nur des Lieferanten.",
+          "muster": "Jede Partei kann den Vertrag unter Einhaltung einer Frist von [Frist] Monaten auf das Ende eines Monats schriftlich kündigen. Das Recht zur Kündigung aus wichtigem Grund bleibt vorbehalten."
+        },
+        {
+          "title": "Vergütung und Preisanpassung",
+          "gruen": "Fixpreise; Anpassung höchstens einmal jährlich, gekoppelt an den Landesindex der Konsumentenpreise, maximal 3 %, mit 3 Monaten Ankündigung.",
+          "gelb": "Anpassung bis 5 % pro Jahr mit Ankündigung.",
+          "rot": "Einseitige Preisanpassung ohne Obergrenze oder ohne Sonderkündigungsrecht der LLV.",
+          "muster": "Die Vergütung beträgt [Betrag] exkl. MWST. Eine Anpassung ist frühestens nach 12 Monaten, höchstens einmal jährlich und maximal im Umfang der Veränderung des Landesindex der Konsumentenpreise, höchstens jedoch 3 %, zulässig."
+        },
+        {
+          "title": "Verfügbarkeit",
+          "gruen": "Mindestens 99.5 % pro Monat, Reporting monatlich durch den Lieferanten.",
+          "gelb": "99.0 % bis 99.5 % pro Monat.",
+          "rot": "Unter 99.0 % oder keine verbindliche Verfügbarkeitszusage.",
+          "muster": "Der Lieferant gewährleistet eine Verfügbarkeit von mindestens 99.5 % pro Kalendermonat, gemessen am Übergabepunkt. Er rapportiert die Verfügbarkeit monatlich."
+        },
+        {
+          "title": "Datenschutz und Datenstandort",
+          "gruen": "Verarbeitung gemäss DSGVO (EWR) und liechtensteinischem DSG; AVV abgeschlossen; Datenhaltung in FL, CH oder EWR.",
+          "gelb": "Datenhaltung ausserhalb des EWR mit Angemessenheitsbeschluss und Standardvertragsklauseln.",
+          "rot": "Datenhaltung in Drittstaaten ohne Garantien oder Nutzung von LLV-Daten für eigene Zwecke (z. B. KI-Training).",
+          "muster": "Der Lieferant verarbeitet Personendaten ausschliesslich im Auftrag der LLV und nach Massgabe der Auftragsverarbeitungsvereinbarung. Die Daten werden ausschliesslich in Rechenzentren in Liechtenstein, der Schweiz oder im EWR gespeichert."
+        },
+        {
+          "title": "Exit und Datenrückgabe",
+          "gruen": "Rückgabe aller Daten in einem Standardformat innert 30 Tagen, Migrationsunterstützung zu vertraglichen Ansätzen, Löschbestätigung.",
+          "gelb": "Rückgabe innert 90 Tagen oder kostenpflichtig nach Aufwand.",
+          "rot": "Keine Rückgabepflicht oder nur in proprietärem Format.",
+          "muster": "Bei Vertragsende übergibt der Lieferant der LLV sämtliche Daten innert 30 Tagen in einem gängigen, maschinenlesbaren Format und bestätigt anschliessend schriftlich deren Löschung."
+        },
+        {
+          "title": "Haftung",
+          "gruen": "Haftung mindestens in Höhe des Jahresvertragswerts; unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Personenschäden.",
+          "gelb": "Begrenzung auf 50–100 % des Jahresvertragswerts.",
+          "rot": "Begrenzung unter 50 % des Jahresvertragswerts, Ausschluss bei grober Fahrlässigkeit oder Ausschluss der Haftung für Datenverlust.",
+          "muster": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt."
+        },
+        {
+          "title": "Nutzungs- und Schutzrechte",
+          "gruen": "Rechte an Individualentwicklungen gehen an die LLV über; an Standardsoftware unbefristetes, nicht-exklusives Nutzungsrecht.",
+          "gelb": "Bei SaaS Nutzungsrecht auf Vertragsdauer; Arbeitsergebnisse mit einfachem Nutzungsrecht.",
+          "rot": "Rechte an LLV-Daten oder an Arbeitsergebnissen verbleiben ausschliesslich beim Lieferanten.",
+          "muster": "Sämtliche Rechte an Arbeitsergebnissen, die eigens für die LLV erstellt werden, gehen mit ihrer Entstehung auf die LLV über. Die Daten der LLV bleiben in deren Eigentum."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "Wartung/Support (SLA)",
+      "version": "1.6",
+      "date": "17.03.2026",
+      "criteria": [
+        {
+          "title": "Laufzeit und Verlängerung",
+          "gruen": "Feste Laufzeit von höchstens 3 Jahren; stillschweigende Verlängerung um höchstens 12 Monate.",
+          "gelb": "Automatische Verlängerung um 13 bis 24 Monate, sofern die Kündigungsfrist höchstens 6 Monate beträgt.",
+          "rot": "Automatische Verlängerung um mehr als 24 Monate oder Mindestlaufzeit über 5 Jahre ohne Ausstiegsmöglichkeit.",
+          "muster": "Der Vertrag tritt mit Unterzeichnung in Kraft und gilt für eine feste Dauer von [Laufzeit]. Danach verlängert er sich jeweils um 12 Monate, sofern er nicht fristgerecht gekündigt wird."
+        },
+        {
+          "title": "Kündigung",
+          "gruen": "Ordentliche Kündigung durch die LLV mit höchstens 6 Monaten Frist auf Monatsende; ausserordentliche Kündigung aus wichtigem Grund jederzeit.",
+          "gelb": "Kündigungsfrist 6 bis 12 Monate oder Kündigung nur auf Jahresende.",
+          "rot": "Kündigungsfrist über 12 Monate, kein ausserordentliches Kündigungsrecht oder einseitiges Kündigungsrecht nur des Lieferanten.",
+          "muster": "Jede Partei kann den Vertrag unter Einhaltung einer Frist von [Frist] Monaten auf das Ende eines Monats schriftlich kündigen. Das Recht zur Kündigung aus wichtigem Grund bleibt vorbehalten."
+        },
+        {
+          "title": "Vergütung und Preisanpassung",
+          "gruen": "Fixpreise; Anpassung höchstens einmal jährlich, gekoppelt an den Landesindex der Konsumentenpreise, maximal 3 %, mit 3 Monaten Ankündigung.",
+          "gelb": "Anpassung bis 5 % pro Jahr mit Ankündigung.",
+          "rot": "Einseitige Preisanpassung ohne Obergrenze oder ohne Sonderkündigungsrecht der LLV.",
+          "muster": "Die Vergütung beträgt [Betrag] exkl. MWST. Eine Anpassung ist frühestens nach 12 Monaten, höchstens einmal jährlich und maximal im Umfang der Veränderung des Landesindex der Konsumentenpreise, höchstens jedoch 3 %, zulässig."
+        },
+        {
+          "title": "Verfügbarkeit",
+          "gruen": "Mindestens 99.5 % pro Monat, Reporting monatlich durch den Lieferanten.",
+          "gelb": "99.0 % bis 99.5 % pro Monat.",
+          "rot": "Unter 99.0 % oder keine verbindliche Verfügbarkeitszusage.",
+          "muster": "Der Lieferant gewährleistet eine Verfügbarkeit von mindestens 99.5 % pro Kalendermonat, gemessen am Übergabepunkt. Er rapportiert die Verfügbarkeit monatlich."
+        },
+        {
+          "title": "Reaktions- und Lösungszeiten",
+          "gruen": "P1: Reaktion ≤ 1 h, Lösung ≤ 4 h; P2: Reaktion ≤ 4 h, Lösung ≤ 1 Arbeitstag; Servicezeit Mo–Fr 07.00–18.00 Uhr.",
+          "gelb": "P1: Reaktion ≤ 4 h, Lösung ≤ 1 Arbeitstag.",
+          "rot": "Keine verbindlichen Zeiten oder lediglich «best effort».",
+          "muster": "Für Störungen gelten folgende Zeiten: Priorität 1 – Reaktion innert 1 Stunde, Lösung oder Umgehung innert 4 Stunden; Priorität 2 – Reaktion innert 4 Stunden, Lösung innert 1 Arbeitstag."
+        },
+        {
+          "title": "Service Credits",
+          "gruen": "Gutschriften bei SLA-Verletzung, mind. 5 % der Monatsgebühr je angefangene 0.5 % Unterschreitung; Sonderkündigungsrecht bei wiederholter Verletzung.",
+          "gelb": "Gutschriften gedeckelt auf 10 % der Monatsgebühr.",
+          "rot": "Keine Rechtsfolgen bei SLA-Verletzung.",
+          "muster": "Bei Unterschreitung der vereinbarten Verfügbarkeit schreibt der Lieferant je angefangene 0.5 % Unterschreitung 5 % der Monatsgebühr gut. Bei Unterschreitung in drei aufeinanderfolgenden Monaten kann die LLV den Vertrag fristlos kündigen."
+        },
+        {
+          "title": "Haftung",
+          "gruen": "Haftung mindestens in Höhe des Jahresvertragswerts; unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Personenschäden.",
+          "gelb": "Begrenzung auf 50–100 % des Jahresvertragswerts.",
+          "rot": "Begrenzung unter 50 % des Jahresvertragswerts, Ausschluss bei grober Fahrlässigkeit oder Ausschluss der Haftung für Datenverlust.",
+          "muster": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "Beratung/Dienstleistung",
+      "version": "1.4",
+      "date": "30.06.2026",
+      "criteria": [
+        {
+          "title": "Stundensätze und Spesen",
+          "gruen": "Gemäss LLV-Ansätzen (Senior max. CHF 180/h, Junior max. CHF 130/h); Reisezeit und Spesen nicht verrechenbar.",
+          "gelb": "Bis 10 % über LLV-Ansätzen mit Begründung.",
+          "rot": "Mehr als 10 % über LLV-Ansätzen oder pauschale Reisezeit-/Spesenverrechnung.",
+          "muster": "Die Leistungen werden nach effektivem Aufwand zu folgenden Ansätzen verrechnet: Senior CHF 180.–/h, Junior CHF 130.–/h, jeweils exkl. MWST. Reisezeit und Spesen sind in den Ansätzen enthalten."
+        },
+        {
+          "title": "Schlüsselpersonen",
+          "gruen": "Benannte Schlüsselpersonen; Wechsel nur mit Zustimmung der LLV.",
+          "gelb": "Wechsel mit vorgängiger Information und gleichwertigem Ersatz.",
+          "rot": "Keine Regelung zu Schlüsselpersonen.",
+          "muster": "Der Lieferant setzt die in Anhang 1 genannten Schlüsselpersonen ein. Ein Wechsel bedarf der vorgängigen Zustimmung der LLV."
+        },
+        {
+          "title": "Abnahme und Gewährleistung",
+          "gruen": "Schriftliche Abnahme durch die LLV; Gewährleistung 12 Monate ab Abnahme.",
+          "gelb": "Gewährleistung 6 Monate.",
+          "rot": "Abnahmefiktion nach weniger als 10 Arbeitstagen oder Ausschluss der Gewährleistung.",
+          "muster": "Die Leistungen gelten erst mit schriftlicher Abnahme durch die LLV als erbracht. Die Gewährleistungsfrist beträgt 12 Monate ab Abnahme."
+        },
+        {
+          "title": "Nutzungs- und Schutzrechte",
+          "gruen": "Rechte an Individualentwicklungen gehen an die LLV über; an Standardsoftware unbefristetes, nicht-exklusives Nutzungsrecht.",
+          "gelb": "Bei SaaS Nutzungsrecht auf Vertragsdauer; Arbeitsergebnisse mit einfachem Nutzungsrecht.",
+          "rot": "Rechte an LLV-Daten oder an Arbeitsergebnissen verbleiben ausschliesslich beim Lieferanten.",
+          "muster": "Sämtliche Rechte an Arbeitsergebnissen, die eigens für die LLV erstellt werden, gehen mit ihrer Entstehung auf die LLV über. Die Daten der LLV bleiben in deren Eigentum."
+        },
+        {
+          "title": "Haftung",
+          "gruen": "Haftung mindestens in Höhe des Jahresvertragswerts; unbeschränkt bei Vorsatz, grober Fahrlässigkeit und Personenschäden.",
+          "gelb": "Begrenzung auf 50–100 % des Jahresvertragswerts.",
+          "rot": "Begrenzung unter 50 % des Jahresvertragswerts, Ausschluss bei grober Fahrlässigkeit oder Ausschluss der Haftung für Datenverlust.",
+          "muster": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt."
+        },
+        {
+          "title": "Geheimhaltung und Amtsgeheimnis",
+          "gruen": "Umfassende Geheimhaltungspflicht inkl. Hinweis auf das Amtsgeheimnis; gilt unbefristet über das Vertragsende hinaus.",
+          "gelb": "Geheimhaltung befristet auf mindestens 5 Jahre nach Vertragsende.",
+          "rot": "Keine Geheimhaltungsklausel oder Dauer unter 5 Jahren.",
+          "muster": "Der Lieferant verpflichtet sich, sämtliche Informationen, die ihm im Rahmen dieses Vertrags bekannt werden, vertraulich zu behandeln. Er nimmt zur Kenntnis, dass diese dem Amtsgeheimnis unterliegen können. Die Pflicht gilt über das Vertragsende hinaus."
+        },
+        {
+          "title": "Kündigung",
+          "gruen": "Ordentliche Kündigung durch die LLV mit höchstens 6 Monaten Frist auf Monatsende; ausserordentliche Kündigung aus wichtigem Grund jederzeit.",
+          "gelb": "Kündigungsfrist 6 bis 12 Monate oder Kündigung nur auf Jahresende.",
+          "rot": "Kündigungsfrist über 12 Monate, kein ausserordentliches Kündigungsrecht oder einseitiges Kündigungsrecht nur des Lieferanten.",
+          "muster": "Jede Partei kann den Vertrag unter Einhaltung einer Frist von [Frist] Monaten auf das Ende eines Monats schriftlich kündigen. Das Recht zur Kündigung aus wichtigem Grund bleibt vorbehalten."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    },
+    {
+      "contractType": "NDA",
+      "version": "1.2",
+      "date": "11.11.2025",
+      "criteria": [
+        {
+          "title": "Geheimhaltung und Amtsgeheimnis",
+          "gruen": "Umfassende Geheimhaltungspflicht inkl. Hinweis auf das Amtsgeheimnis; gilt unbefristet über das Vertragsende hinaus.",
+          "gelb": "Geheimhaltung befristet auf mindestens 5 Jahre nach Vertragsende.",
+          "rot": "Keine Geheimhaltungsklausel oder Dauer unter 5 Jahren.",
+          "muster": "Der Lieferant verpflichtet sich, sämtliche Informationen, die ihm im Rahmen dieses Vertrags bekannt werden, vertraulich zu behandeln. Er nimmt zur Kenntnis, dass diese dem Amtsgeheimnis unterliegen können. Die Pflicht gilt über das Vertragsende hinaus."
+        },
+        {
+          "title": "Konventionalstrafe",
+          "gruen": "CHF 20’000 je Verletzung, weitergehender Schadenersatz vorbehalten.",
+          "gelb": "CHF 5’000 bis 20’000 je Verletzung.",
+          "rot": "Keine Konventionalstrafe.",
+          "muster": "Bei Verletzung der Geheimhaltungspflicht schuldet die verletzende Partei eine Konventionalstrafe von CHF 20’000 je Fall. Die Geltendmachung weiteren Schadens bleibt vorbehalten."
+        },
+        {
+          "title": "Laufzeit und Verlängerung",
+          "gruen": "Feste Laufzeit von höchstens 3 Jahren; stillschweigende Verlängerung um höchstens 12 Monate.",
+          "gelb": "Automatische Verlängerung um 13 bis 24 Monate, sofern die Kündigungsfrist höchstens 6 Monate beträgt.",
+          "rot": "Automatische Verlängerung um mehr als 24 Monate oder Mindestlaufzeit über 5 Jahre ohne Ausstiegsmöglichkeit.",
+          "muster": "Der Vertrag tritt mit Unterzeichnung in Kraft und gilt für eine feste Dauer von [Laufzeit]. Danach verlängert er sich jeweils um 12 Monate, sofern er nicht fristgerecht gekündigt wird."
+        },
+        {
+          "title": "Anwendbares Recht und Gerichtsstand",
+          "gruen": "Liechtensteinisches Recht; ausschliesslicher Gerichtsstand Vaduz.",
+          "gelb": "Schweizer Recht mit Gerichtsstand Vaduz oder Schiedsgericht mit Sitz in Liechtenstein.",
+          "rot": "Ausländisches Recht oder Gerichtsstand ausserhalb Liechtensteins.",
+          "muster": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz."
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "C-301",
+      "title": "Hosting Bürgerportal – Verlängerung 2027",
+      "type": "SaaS-Vertrag",
+      "supplierId": "L-1002",
+      "supplierName": "Alpina Cloud Services GmbH",
+      "received": "2026-11-03",
+      "due": "2026-11-13",
+      "clauses": [
+        {
+          "titel": "§ 1 Geltung",
+          "text": "Es gelten die Allgemeinen Geschäftsbedingungen der Alpina Cloud Services GmbH in der jeweils gültigen Fassung. Sie gehen abweichenden Bestimmungen dieses Vertrags vor."
+        },
+        {
+          "titel": "§ 3 Laufzeit",
+          "text": "Der Vertrag wird für 36 Monate abgeschlossen und verlängert sich jeweils um weitere 36 Monate, sofern er nicht 3 Monate vor Ablauf gekündigt wird."
+        },
+        {
+          "titel": "§ 4 Kündigung",
+          "text": "Eine ordentliche Kündigung ist mit einer Frist von 3 Monaten auf das Ende eines Kalenderjahres möglich. Das Recht zur ausserordentlichen Kündigung aus wichtigem Grund bleibt unberührt."
+        },
+        {
+          "titel": "§ 5 Preise",
+          "text": "Der Anbieter ist berechtigt, die Preise jährlich um bis zu 7 % anzupassen. Die Anpassung wird 30 Tage im Voraus angekündigt."
+        },
+        {
+          "titel": "§ 6 Service Level",
+          "text": "Der Anbieter stellt eine Verfügbarkeit von 99.0 % im Jahresmittel bereit. Geplante Wartungsfenster werden nicht angerechnet."
+        },
+        {
+          "titel": "§ 7 Datenschutz",
+          "text": "Die Daten werden in Rechenzentren in Frankfurt (DE) gespeichert. Für Support-Leistungen können Subunternehmer in den USA beigezogen werden; es gelten die EU-Standardvertragsklauseln."
+        },
+        {
+          "titel": "§ 8 Datenrückgabe",
+          "text": "Nach Vertragsende werden die Kundendaten während 30 Tagen im Format JSON/CSV zum Download bereitgestellt und anschliessend gelöscht."
+        },
+        {
+          "titel": "§ 9 Haftung",
+          "text": "Die Haftung des Anbieters ist auf die in den letzten drei Monaten bezahlten Gebühren beschränkt. Die Haftung für Datenverlust ist ausgeschlossen."
+        },
+        {
+          "titel": "§ 10 Rechte",
+          "text": "Der Kunde erhält für die Vertragsdauer ein nicht-exklusives Nutzungsrecht an der Plattform. Die Kundendaten verbleiben im Eigentum des Kunden."
+        },
+        {
+          "titel": "§ 12 Recht und Gerichtsstand",
+          "text": "Es gilt Schweizer Recht. Gerichtsstand ist Zürich."
+        }
+      ],
+      "fixture": [
+        {
+          "criterionKey": "rangfolge-der-vertragsbestandteile",
+          "criterionTitle": "Rangfolge der Vertragsbestandteile",
+          "location": "§ 1 Geltung",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "AGB des Anbieters gehen dem Vertrag vor – widerspricht dem Standard (AGB ausgeschlossen).",
+          "proposal": "Es gelten in nachstehender Rangfolge: (1) dieser Vertrag, (2) seine Anhänge, (3) das Angebot des Lieferanten. Allgemeine Geschäftsbedingungen des Lieferanten finden keine Anwendung.",
+          "missing": false
+        },
+        {
+          "criterionKey": "laufzeit-und-verlaengerung",
+          "criterionTitle": "Laufzeit und Verlängerung",
+          "location": "§ 3 Laufzeit",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Automatische Verlängerung um 36 Monate übersteigt die Obergrenze von 24 Monaten.",
+          "proposal": "Der Vertrag gilt für eine feste Dauer von 36 Monaten und verlängert sich danach jeweils um 12 Monate, sofern er nicht 6 Monate vor Ablauf gekündigt wird.",
+          "missing": false
+        },
+        {
+          "criterionKey": "kuendigung",
+          "criterionTitle": "Kündigung",
+          "location": "§ 4 Kündigung",
+          "quote": null,
+          "ampel": "gelb",
+          "reason": "Frist von 3 Monaten ist akzeptabel, Kündigung jedoch nur auf Jahresende möglich.",
+          "proposal": "Jede Partei kann den Vertrag unter Einhaltung einer Frist von 3 Monaten auf das Ende eines Monats kündigen.",
+          "missing": false
+        },
+        {
+          "criterionKey": "verguetung-und-preisanpassung",
+          "criterionTitle": "Vergütung und Preisanpassung",
+          "location": "§ 5 Preise",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Jährliche Anpassung bis 7 % ohne Indexbindung und ohne Sonderkündigungsrecht; Standard erlaubt max. 3 % (bis 5 % verhandelbar).",
+          "proposal": "Die Vergütung beträgt [Betrag] exkl. MWST. Eine Anpassung ist frühestens nach 12 Monaten, höchstens einmal jährlich und maximal im Umfang der Veränderung des Landesindex der Konsumentenpreise, höchstens jedoch 3 %, zulässig.",
+          "missing": false
+        },
+        {
+          "criterionKey": "verfuegbarkeit",
+          "criterionTitle": "Verfügbarkeit",
+          "location": "§ 6 Service Level",
+          "quote": null,
+          "ampel": "gelb",
+          "reason": "99.0 % im Jahresmittel liegt im verhandelbaren Bereich; Standard verlangt 99.5 % pro Monat.",
+          "proposal": "Der Lieferant gewährleistet eine Verfügbarkeit von mindestens 99.5 % pro Kalendermonat, gemessen am Übergabepunkt. Er rapportiert die Verfügbarkeit monatlich.",
+          "missing": false
+        },
+        {
+          "criterionKey": "datenschutz-und-datenstandort",
+          "criterionTitle": "Datenschutz und Datenstandort",
+          "location": "§ 7 Datenschutz",
+          "quote": null,
+          "ampel": "gelb",
+          "reason": "Speicherung im EWR ist konform; Support-Subunternehmer in den USA nur mit Standardvertragsklauseln – verhandelbar, AVV fehlt.",
+          "proposal": "Ein Zugriff aus Drittstaaten ist nur mit vorgängiger schriftlicher Zustimmung der LLV zulässig. Die Parteien schliessen eine Auftragsverarbeitungsvereinbarung ab.",
+          "missing": false
+        },
+        {
+          "criterionKey": "exit-und-datenrueckgabe",
+          "criterionTitle": "Exit und Datenrückgabe",
+          "location": "§ 8 Datenrückgabe",
+          "quote": null,
+          "ampel": "gruen",
+          "reason": "Rückgabe innert 30 Tagen in Standardformat entspricht dem Standard; Löschbestätigung ergänzen.",
+          "proposal": "",
+          "missing": false
+        },
+        {
+          "criterionKey": "haftung",
+          "criterionTitle": "Haftung",
+          "location": "§ 9 Haftung",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Beschränkung auf 3 Monatsgebühren (ca. 25 % des Jahreswerts) und Ausschluss für Datenverlust sind nicht akzeptabel.",
+          "proposal": "Die Parteien haften für Schäden bis zur Höhe des jährlichen Vertragswerts, mindestens jedoch CHF 100’000. Für Vorsatz, grobe Fahrlässigkeit sowie Personenschäden ist die Haftung unbeschränkt.",
+          "missing": false
+        },
+        {
+          "criterionKey": "nutzungs-und-schutzrechte",
+          "criterionTitle": "Nutzungs- und Schutzrechte",
+          "location": "§ 10 Rechte",
+          "quote": null,
+          "ampel": "gruen",
+          "reason": "Nutzungsrecht auf Vertragsdauer bei SaaS und Dateneigentum beim Kunden entsprechen dem Standard.",
+          "proposal": "",
+          "missing": false
+        },
+        {
+          "criterionKey": "anwendbares-recht-und-gerichtsstand",
+          "criterionTitle": "Anwendbares Recht und Gerichtsstand",
+          "location": "§ 12 Recht und Gerichtsstand",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Schweizer Recht wäre verhandelbar, Gerichtsstand Zürich liegt jedoch ausserhalb Liechtensteins.",
+          "proposal": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz.",
+          "missing": false
+        }
+      ]
+    },
+    {
+      "id": "C-302",
+      "title": "Beratung Digitalisierungsstrategie 2027",
+      "type": "Beratung/Dienstleistung",
+      "supplierId": "L-1010",
+      "supplierName": "Novalis Consulting GmbH",
+      "received": "2026-11-05",
+      "due": "2026-11-19",
+      "clauses": [
+        {
+          "titel": "1. Honorar",
+          "text": "Die Leistungen werden nach Aufwand verrechnet: Partner CHF 260/h, Senior Consultant CHF 210/h, Consultant CHF 150/h. Reisezeit wird zu 50 % verrechnet, Spesen pauschal mit 8 % des Honorars."
+        },
+        {
+          "titel": "2. Projektteam",
+          "text": "Das Projekt wird von Thomas Moser (Partner) und Julia Ritter (Senior Consultant) geleitet. Ein Wechsel erfolgt nach Information des Auftraggebers."
+        },
+        {
+          "titel": "3. Abnahme",
+          "text": "Arbeitsergebnisse gelten als abgenommen, wenn der Auftraggeber nicht innert 5 Arbeitstagen nach Übergabe schriftlich widerspricht."
+        },
+        {
+          "titel": "4. Urheberrechte",
+          "text": "Sämtliche Urheberrechte an Konzepten, Methoden und Unterlagen verbleiben beim Berater. Der Auftraggeber erhält ein einfaches Nutzungsrecht für interne Zwecke."
+        },
+        {
+          "titel": "5. Haftung",
+          "text": "Die Haftung ist auf die Höhe des Gesamthonorars beschränkt, ausgenommen Vorsatz und grobe Fahrlässigkeit."
+        },
+        {
+          "titel": "6. Vertraulichkeit",
+          "text": "Die Parteien behandeln vertrauliche Informationen während 3 Jahren nach Projektabschluss vertraulich."
+        },
+        {
+          "titel": "7. Beendigung",
+          "text": "Der Auftrag kann von beiden Parteien mit einer Frist von 30 Tagen schriftlich beendet werden."
+        },
+        {
+          "titel": "8. Recht",
+          "text": "Es gilt österreichisches Recht. Gerichtsstand ist Feldkirch."
+        }
+      ],
+      "fixture": [
+        {
+          "criterionKey": "stundensaetze-und-spesen",
+          "criterionTitle": "Stundensätze und Spesen",
+          "location": "1. Honorar",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Senior CHF 210/h liegt 17 % über dem LLV-Ansatz; Reisezeit und Spesenpauschale sind nicht verrechenbar.",
+          "proposal": "Die Leistungen werden nach effektivem Aufwand zu folgenden Ansätzen verrechnet: Senior CHF 180.–/h, Junior CHF 130.–/h, jeweils exkl. MWST. Reisezeit und Spesen sind in den Ansätzen enthalten.",
+          "missing": false
+        },
+        {
+          "criterionKey": "schluesselpersonen",
+          "criterionTitle": "Schlüsselpersonen",
+          "location": "2. Projektteam",
+          "quote": null,
+          "ampel": "gelb",
+          "reason": "Schlüsselpersonen benannt; Wechsel nur mit Information statt Zustimmung.",
+          "proposal": "Der Lieferant setzt die in Anhang 1 genannten Schlüsselpersonen ein. Ein Wechsel bedarf der vorgängigen Zustimmung der LLV.",
+          "missing": false
+        },
+        {
+          "criterionKey": "abnahme-und-gewaehrleistung",
+          "criterionTitle": "Abnahme und Gewährleistung",
+          "location": "3. Abnahme",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Abnahmefiktion nach 5 Arbeitstagen unterschreitet die Mindestfrist von 10 Arbeitstagen.",
+          "proposal": "Die Leistungen gelten erst mit schriftlicher Abnahme durch die LLV als erbracht. Die Gewährleistungsfrist beträgt 12 Monate ab Abnahme.",
+          "missing": false
+        },
+        {
+          "criterionKey": "nutzungs-und-schutzrechte",
+          "criterionTitle": "Nutzungs- und Schutzrechte",
+          "location": "4. Urheberrechte",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Rechte an eigens erstellten Arbeitsergebnissen verbleiben beim Berater.",
+          "proposal": "Sämtliche Rechte an Arbeitsergebnissen, die eigens für die LLV erstellt werden, gehen mit ihrer Entstehung auf die LLV über. Die Daten der LLV bleiben in deren Eigentum.",
+          "missing": false
+        },
+        {
+          "criterionKey": "haftung",
+          "criterionTitle": "Haftung",
+          "location": "5. Haftung",
+          "quote": null,
+          "ampel": "gruen",
+          "reason": "Haftung bis Gesamthonorar, unbeschränkt bei Vorsatz und grober Fahrlässigkeit – entspricht dem Standard.",
+          "proposal": "",
+          "missing": false
+        },
+        {
+          "criterionKey": "geheimhaltung-und-amtsgeheimnis",
+          "criterionTitle": "Geheimhaltung und Amtsgeheimnis",
+          "location": "6. Vertraulichkeit",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Dauer von 3 Jahren unterschreitet die Mindestdauer von 5 Jahren; Hinweis auf Amtsgeheimnis fehlt.",
+          "proposal": "Der Lieferant verpflichtet sich, sämtliche Informationen, die ihm im Rahmen dieses Vertrags bekannt werden, vertraulich zu behandeln. Er nimmt zur Kenntnis, dass diese dem Amtsgeheimnis unterliegen können. Die Pflicht gilt über das Vertragsende hinaus.",
+          "missing": false
+        },
+        {
+          "criterionKey": "kuendigung",
+          "criterionTitle": "Kündigung",
+          "location": "7. Beendigung",
+          "quote": null,
+          "ampel": "gruen",
+          "reason": "Kündigungsfrist 30 Tage entspricht dem Standard.",
+          "proposal": "",
+          "missing": false
+        },
+        {
+          "criterionKey": "anwendbares-recht-und-gerichtsstand",
+          "criterionTitle": "Anwendbares Recht und Gerichtsstand",
+          "location": "8. Recht",
+          "quote": null,
+          "ampel": "rot",
+          "reason": "Österreichisches Recht und Gerichtsstand Feldkirch sind nicht akzeptabel.",
+          "proposal": "Dieser Vertrag untersteht liechtensteinischem Recht unter Ausschluss des Kollisionsrechts. Ausschliesslicher Gerichtsstand ist Vaduz.",
+          "missing": false
+        }
+      ]
+    }
+  ],
+  "sampleContract": {
+    "name": "Supportvertrag_Medicus_Terminplanung.pdf",
+    "groesse": "412 KB",
+    "text": "SUPPORT- UND WARTUNGSVERTRAG Nr. MS-2026-114\nzwischen der Liechtensteinischen Landesverwaltung, Amt für Gesundheit, Äulestrasse 51, 9490 Vaduz (nachfolgend «LLV») und der Medicus Soft AG, Rosenbergstrasse 22, 9000 St. Gallen (nachfolgend «Lieferant»).\n1. Gegenstand: Wartung und Support der Applikation «Terminplanung Impfzentrum» (Betrieb durch den Lieferanten, Minimalbetreuung).\n2. Laufzeit: Der Vertrag beginnt am 1. Januar 2027 und gilt bis 31. Dezember 2028. Er verlängert sich danach stillschweigend um jeweils 12 Monate.\n3. Kündigung: Jede Partei kann den Vertrag mit einer Frist von 6 Monaten auf das Ende der Laufzeit kündigen.\n4. Vergütung: Pauschal CHF 28'800.– pro Jahr exkl. MWST, zahlbar quartalsweise im Voraus.\n5. Service Level: Verfügbarkeit 99.5 % pro Monat; Priorität 1: Reaktion innert 2 Stunden.\n6. Ansprechpartnerin Lieferant: Andrea Baumann, a.baumann@medicus-soft.ch.\n7. Datenschutz: Die Parteien schliessen eine separate Auftragsverarbeitungsvereinbarung ab.\n8. Anwendbares Recht ist liechtensteinisches Recht, Gerichtsstand ist Vaduz.\nVaduz, 28. Oktober 2026"
+  },
+  "persons": {
+    "ib": "I. Büchel",
+    "mf": "M. Frick",
+    "sh": "S. Hasler",
+    "rk": "R. Kaiser",
+    "aw": "A. Wohlwend",
+    "tm": "T. Marxer",
+    "cb": "C. Beck",
+    "ns": "N. Schädler"
+  }
+}

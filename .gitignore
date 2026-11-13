@@ -4,3 +4,7 @@ dist/
 .env.*
 .DS_Store
 .hallmark/
+data/
+.azure/
+apps/api/data/
+*.tsbuildinfo
