@@ -295,7 +295,8 @@ function Links({ links, root, onDone }: { links: Link[]; root: React.RefObject<H
   useLayoutEffect(() => {
     const r = root.current;
     if (!r) return;
-    const base = r.getBoundingClientRect();
+    // Links and packets are positioned inside .stage__body, so measure from there.
+    const base = (r.querySelector('.stage__body') ?? r).getBoundingClientRect();
     const next = links
       .map((l) => {
         const a = document.getElementById(l.from);
